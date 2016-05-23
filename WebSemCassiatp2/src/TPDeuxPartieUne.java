@@ -1,13 +1,17 @@
+import java.io.BufferedWriter;
+import java.io.File;
+import java.io.FileOutputStream;
+import java.io.OutputStreamWriter;
+import java.io.PrintWriter;
 import java.net.URI;
-import java.net.URISyntaxException;
 import java.util.Properties;
 
 import org.semanticweb.owl.align.Alignment;
-import org.semanticweb.owl.align.AlignmentException;
 import org.semanticweb.owl.align.AlignmentProcess;
+import org.semanticweb.owl.align.AlignmentVisitor;
 
-import fr.inrialpes.exmo.align.impl.eval.PRecEvaluator;
-import fr.inrialpes.exmo.align.parser.AlignmentParser;
+import fr.inrialpes.exmo.align.impl.method.ClassStructAlignment;
+import fr.inrialpes.exmo.align.impl.renderer.RDFRendererVisitor;
 
 public class TPDeuxPartieUne {
 
@@ -25,25 +29,28 @@ public class TPDeuxPartieUne {
 		URI UriDBPediaOntologie = new URI("http://mappings.dbpedia.org/server/ontology/dbpedia.owl");
 		
 		// paire d'ontologie (votre ontologie et FilmsToulouse)
-		traiterUnePaireDOntologies(UriNotreOntologie, UriFilmsToulouseOntologie);
+		traiterUnePaireDOntologies(UriNotreOntologie, UriFilmsToulouseOntologie, "films-toulouse-");
 
 		// paire d'ontologie (votre ontologie et DBPedia)
-		traiterUnePaireDOntologies(UriNotreOntologie, UriDBPediaOntologie);
+		traiterUnePaireDOntologies(UriNotreOntologie, UriDBPediaOntologie, "dbpedia-");
 	}
 	
 	// On genere un alignement et on en check la qualité selon trois methides differentes
-	public void traiterUnePaireDOntologies(URI ontologieA, URI ontologieB){
+	public void traiterUnePaireDOntologies(URI ontologieA, URI ontologieB, String prefixNomFichier) throws Exception{
 		Alignment alignement;
 		//choisissez l'un des matcheurs implementé par l'API d'Alignement et que vous avez 
 		 //testé lors du premier TP ; 
-		alignement = genererAlignement(ontologieA, ontologieB, MONALIGNEURMAGUEULE);
+		alignement = genererAlignement(ontologieA, ontologieB, new ClassStructAlignment());
+		render(alignement, "./alignement"+prefixNomFichier+"-de-base.rdf");
 		
 		// 2. développez le matcheur basé sur la comparaison de labels indiqué ci-dessous ;
-		alignement = genererAlignement(ontologieA, ontologieB, MONALIGNEURMAGUEULE);
-		 
+		//TODO alignement = genererAlignement(ontologieA, ontologieB, MONALIGNEURMAGUEULE);
+		render(alignement, "./alignement"+prefixNomFichier+"-comparaison-label.rdf");
+		
 		 //3. utilisez le matcheur LogMap, disponible
 		 //sur http://www.cs.ox.ac.uk/isg/projects/LogMap/.
-		alignement = genererAlignement(ontologieA, ontologieB, MONALIGNEURMAGUEULE);
+		//TODO alignement = genererAlignement(ontologieA, ontologieB, MONALIGNEURMAGUEULE);
+		render(alignement, "./alignement"+prefixNomFichier+"-logmap.rdf");
 		
 	}
 	
@@ -61,14 +68,19 @@ public class TPDeuxPartieUne {
 		return process;
 	}
 	
-	public static void evaluerAlignement(Alignment alignment) throws Exception { 
-	URI reference = new URI("http://oaei.ontologymatching.org/tests/302/refalign.rdf");
-	AlignmentParser aparser = new AlignmentParser(0);
-	Alignment refalign = aparser.parse(reference);
-	PRecEvaluator evaluator = new PRecEvaluator(refalign, alignment); 
-	evaluator.eval(new Properties());
-	System.out.println("Precision : " + evaluator.getPrecision()); 
-	System.out.println("Recall :" + evaluator.getRecall()); 
-	System.out.println("FMeasure :" + evaluator.getFmeasure());
+	/**
+	 * Génére le fichier d'alignement rdf .
+	 * @param alignment L'alignement à exporter sous forme de fichier
+	 * @param cheminFichier Le chemin du fichier à générer
+	 * @throws Exception Kancamarchepa
+	 */
+	public static void render(Alignment alignment, String cheminFichier) throws Exception { 
+		PrintWriter writer; 
+		FileOutputStream f = new FileOutputStream(new File(cheminFichier)); 
+		writer = new PrintWriter(new BufferedWriter(new OutputStreamWriter(f,"UTF-8")), true); 
+		AlignmentVisitor renderer = new RDFRendererVisitor(writer); 
+		alignment.render(renderer); 
+		writer.flush(); 
+		writer.close();	
 	}
 }
