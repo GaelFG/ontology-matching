@@ -21,7 +21,7 @@ public class TPDeuxPartieUne {
 
 	public void questionUneGenerationDAlignements() throws Exception {
 		URI UriFilmsToulouseOntologie = new URI("http://www.irit.fr/~Cassia.Trojahn/insa/FilmsToulouse.owl");
-		URI UriNotreOntologie = new URI("http://oaei.ontologymatching.org/tests/302/onto.rdf");//TODO METTRE VRAIE URL
+		URI UriNotreOntologie = new URI("./maFilmographie.owl");//TODO METTRE VRAIE URL
 		URI UriDBPediaOntologie = new URI("http://mappings.dbpedia.org/server/ontology/dbpedia.owl");
 		
 		// paire d'ontologie (votre ontologie et FilmsToulouse)

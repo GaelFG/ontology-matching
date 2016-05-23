@@ -1,0 +1,2369 @@
+Prefix(:=<http://www.irit.fr/recherches/MELODI/ontologies/FilmographieV1.owl#>)
+Prefix(owl:=<http://www.w3.org/2002/07/owl#>)
+Prefix(rdf:=<http://www.w3.org/1999/02/22-rdf-syntax-ns#>)
+Prefix(xml:=<http://www.w3.org/XML/1998/namespace>)
+Prefix(xsd:=<http://www.w3.org/2001/XMLSchema#>)
+Prefix(foaf:=<http://xmlns.com/foaf/0.1/>)
+Prefix(rdfs:=<http://www.w3.org/2000/01/rdf-schema#>)
+Prefix(event:=<http://purl.org/NET/c4dm/event.owl#>)
+Prefix(terms:=<http://purl.org/dc/terms/>)
+Prefix(cinema:=<http://www.irit.fr/recherches/MELODI/ontologies/FilmographieV1.owl#>)
+Prefix(owl2xml:=<http://www.w3.org/2006/12/owl2-xml#>)
+
+
+Ontology(<http://www.irit.fr/recherches/MELODI/ontologies/FilmographieV1.owl>
+Annotation(rdfs:comment "IRIT - Equipe MELODI"@fr)
+Annotation(rdfs:comment "Maj le 27/02/2015"@fr)
+Annotation(rdfs:comment "Ontologie du cinéma (filmographie)"@fr)
+Annotation(rdfs:comment "Version 1 - Publiée le 08 avril 2014"@fr)
+
+Declaration(Class(event:Event))
+Declaration(Class(cinema:AireGeographique))
+Declaration(Class(cinema:Artiste))
+Declaration(Class(cinema:CameraOr))
+Declaration(Class(cinema:Ceremonie))
+Declaration(Class(cinema:CesarDuCinema))
+Declaration(Class(cinema:Cinefondation))
+Declaration(Class(cinema:Competition))
+Declaration(Class(cinema:CompetitionMedia))
+Declaration(Class(cinema:Continent))
+Declaration(Class(cinema:CourantCinematographique))
+Declaration(Class(cinema:CourtMetrage))
+Declaration(Class(cinema:DessinAnime))
+Declaration(Class(cinema:DeuxiemePrixCinefondation))
+Declaration(Class(cinema:Evenement))
+Declaration(Class(cinema:Femme))
+Declaration(Class(cinema:FestivalDeCannes))
+Declaration(Class(cinema:FestivalDeCinema))
+Declaration(Class(cinema:FestivalDeClermontFerrand))
+Declaration(Class(cinema:FestivalDeDeauville))
+Declaration(Class(cinema:FestivalDuReel))
+Declaration(Class(cinema:Film))
+Declaration(Class(cinema:Film3D))
+Declaration(Class(cinema:FilmEnNoirEtBlanc))
+Declaration(Class(cinema:FilmEtranger))
+Declaration(Class(cinema:FilmFrancais))
+Declaration(Class(cinema:FilmLocalise))
+Declaration(Class(cinema:FilmOriginal))
+Declaration(Class(cinema:Genre))
+Declaration(Class(cinema:GenreCinematographique))
+Declaration(Class(cinema:GrandPrix))
+Declaration(Class(cinema:GrandPrixCinemaELLE))
+Declaration(Class(cinema:Homme))
+Declaration(Class(cinema:IntervenantArtistiqueDansOeuvre))
+Declaration(Class(cinema:Lieu))
+Declaration(Class(cinema:LieuAdministratif))
+Declaration(Class(cinema:LongMetrage))
+Declaration(Class(cinema:Oeuvre))
+Declaration(Class(cinema:OeuvreArtistique))
+Declaration(Class(cinema:OeuvreLocalisee))
+Declaration(Class(cinema:OeuvreOriginale))
+Declaration(Class(cinema:Pays))
+Declaration(Class(cinema:Personne))
+Declaration(Class(cinema:PremierPrixCinefondation))
+Declaration(Class(cinema:PriseDeVueEnNoirEtBlanc))
+Declaration(Class(cinema:PrixArtiste))
+Declaration(Class(cinema:PrixCesarDesCesars))
+Declaration(Class(cinema:PrixCritiqueInternationale))
+Declaration(Class(cinema:PrixDecerne))
+Declaration(Class(cinema:PrixDirection))
+Declaration(Class(cinema:PrixFilm))
+Declaration(Class(cinema:PrixFilmdAnimation))
+Declaration(Class(cinema:PrixHonneur))
+Declaration(Class(cinema:PrixInterpretation))
+Declaration(Class(cinema:PrixJury))
+Declaration(Class(cinema:PrixMeilleurActeur))
+Declaration(Class(cinema:PrixMeilleurActeurSecondRole))
+Declaration(Class(cinema:PrixMeilleurDecor))
+Declaration(Class(cinema:PrixMeilleurEspoirFeminin))
+Declaration(Class(cinema:PrixMeilleurEspoirMasculin))
+Declaration(Class(cinema:PrixMeilleurFilm))
+Declaration(Class(cinema:PrixMeilleurMaquillage))
+Declaration(Class(cinema:PrixMeilleurMixageSon))
+Declaration(Class(cinema:PrixMeilleurMontage))
+Declaration(Class(cinema:PrixMeilleurPremierFilm))
+Declaration(Class(cinema:PrixMeilleurScenario))
+Declaration(Class(cinema:PrixMeilleurScenarioOriginal))
+Declaration(Class(cinema:PrixMeilleurScenarioOriginalOuAdaptation))
+Declaration(Class(cinema:PrixMeilleurSon))
+Declaration(Class(cinema:PrixMeilleurSonFilm))
+Declaration(Class(cinema:PrixMeilleureActrice))
+Declaration(Class(cinema:PrixMeilleureActriceSecondRole))
+Declaration(Class(cinema:PrixMeilleureAdaptation))
+Declaration(Class(cinema:PrixMeilleureAffiche))
+Declaration(Class(cinema:PrixMeilleureChansonOriginale))
+Declaration(Class(cinema:PrixMeilleureContributionTechnique))
+Declaration(Class(cinema:PrixMeilleureDirectionArtistique))
+Declaration(Class(cinema:PrixMeilleureMiseEnScene))
+Declaration(Class(cinema:PrixMeilleureMusique))
+Declaration(Class(cinema:PrixMeilleureMusiqueFilm))
+Declaration(Class(cinema:PrixMeilleurePhotographie))
+Declaration(Class(cinema:PrixMeilleureProduction))
+Declaration(Class(cinema:PrixMeilleureRealisation))
+Declaration(Class(cinema:PrixMeilleursCostumes))
+Declaration(Class(cinema:PrixMeilleursCostumesEtDecors))
+Declaration(Class(cinema:PrixMeilleursEffetsVisuels))
+Declaration(Class(cinema:PrixMeriteScientifiqueOuTechnique))
+Declaration(Class(cinema:PrixMichelOrnano))
+Declaration(Class(cinema:PrixMiseEnSceneUnCertainRegard))
+Declaration(Class(cinema:PrixOeuvreCinematographique))
+Declaration(Class(cinema:PrixRevelationCartier))
+Declaration(Class(cinema:PrixScenario))
+Declaration(Class(cinema:PrixScientifiqueEtIngenierie))
+Declaration(Class(cinema:PrixSpecialJuryUnCertainRegard))
+Declaration(Class(cinema:PrixSpecifique))
+Declaration(Class(cinema:PrixSpecifiqueCeremonieCesar))
+Declaration(Class(cinema:PrixSpecifiqueFestivalDeDeauville))
+Declaration(Class(cinema:PrixSpecifiqueFestivaleDeCannes))
+Declaration(Class(cinema:PrixTechnique))
+Declaration(Class(cinema:PrixUnCertainRegard))
+Declaration(Class(cinema:Regisseur))
+Declaration(Class(cinema:Role))
+Declaration(Class(cinema:RoleDAnimal))
+Declaration(Class(cinema:RoleDeChien))
+Declaration(Class(cinema:RoleDeCommissaire))
+Declaration(Class(cinema:RolePrincipal))
+Declaration(Class(cinema:RoleSecondaire))
+Declaration(Class(cinema:Sexe))
+Declaration(Class(cinema:Technicolor))
+Declaration(Class(cinema:Technique))
+Declaration(Class(cinema:TechniqueDAnimation))
+Declaration(Class(cinema:TechniqueDAnimation2DNumerique))
+Declaration(Class(cinema:TechniqueDAnimation3D))
+Declaration(Class(cinema:TechniqueDImageDeSynthese))
+Declaration(Class(cinema:TechniqueDePriseDeSon))
+Declaration(Class(cinema:TechniqueDePriseDeVue))
+Declaration(Class(cinema:TechniqueDuDessinAnime))
+Declaration(Class(cinema:TroisiemePrixCinefondation))
+Declaration(Class(cinema:UnCertainRegard))
+Declaration(Class(cinema:Ville))
+Declaration(Class(owl:Thing))
+Declaration(Class(foaf:Person))
+Declaration(ObjectProperty(cinema:FilmAPourRecompense))
+Declaration(ObjectProperty(cinema:PersonneAPourRecompense))
+Declaration(ObjectProperty(cinema:aEcritScenarioDe))
+Declaration(ObjectProperty(cinema:aFigureDans))
+Declaration(ObjectProperty(cinema:aJoueAvec))
+Declaration(ObjectProperty(cinema:aPourActeur))
+Declaration(ObjectProperty(cinema:aPourActeurFemme))
+Declaration(ObjectProperty(cinema:aPourActeurHomme))
+Declaration(ObjectProperty(cinema:aPourAdaptation))
+Declaration(ObjectProperty(cinema:aPourContributeur))
+Declaration(ObjectProperty(cinema:aPourContributeurArtistique))
+Declaration(ObjectProperty(cinema:aPourFigurant))
+Declaration(ObjectProperty(cinema:aPourGenre))
+Declaration(ObjectProperty(cinema:aPourLieu))
+Declaration(ObjectProperty(cinema:aPourLieuDeTournage))
+Declaration(ObjectProperty(cinema:aPourLieuMort))
+Declaration(ObjectProperty(cinema:aPourLieuNaissance))
+Declaration(ObjectProperty(cinema:aPourLocalisation))
+Declaration(ObjectProperty(cinema:aPourMembreDeJury))
+Declaration(ObjectProperty(cinema:aPourOrigineGeographique))
+Declaration(ObjectProperty(cinema:aPourPaysOrigine))
+Declaration(ObjectProperty(cinema:aPourPresident))
+Declaration(ObjectProperty(cinema:aPourProducteur))
+Declaration(ObjectProperty(cinema:aPourRealisateur))
+Declaration(ObjectProperty(cinema:aPourRecompense))
+Declaration(ObjectProperty(cinema:aPourRole))
+Declaration(ObjectProperty(cinema:aPourScenariste))
+Declaration(ObjectProperty(cinema:aPourSexe))
+Declaration(ObjectProperty(cinema:aPourTechnicien))
+Declaration(ObjectProperty(cinema:aPourTechnique))
+Declaration(ObjectProperty(cinema:aPourTechniqueDAnimation))
+Declaration(ObjectProperty(cinema:aPourTechniqueDePriseDeSon))
+Declaration(ObjectProperty(cinema:aPourTechniqueDePriseDeVues))
+Declaration(ObjectProperty(cinema:aProduit))
+Declaration(ObjectProperty(cinema:aRealise))
+Declaration(ObjectProperty(cinema:acteurAPourCascadeur))
+Declaration(ObjectProperty(cinema:acteurAPourDoublure))
+Declaration(ObjectProperty(cinema:acteurDoublePar))
+Declaration(ObjectProperty(cinema:apparaitDans))
+Declaration(ObjectProperty(cinema:competitionRecompense))
+Declaration(ObjectProperty(cinema:concourtPourCompetition))
+Declaration(ObjectProperty(cinema:concourtPourPrix))
+Declaration(ObjectProperty(cinema:contribueAOeuvre))
+Declaration(ObjectProperty(cinema:contribueArtistiquementAOeuvre))
+Declaration(ObjectProperty(cinema:decerne))
+Declaration(ObjectProperty(cinema:estAccessoiristePour))
+Declaration(ObjectProperty(cinema:estActeurDans))
+Declaration(ObjectProperty(cinema:estActeurDeComplementDans))
+Declaration(ObjectProperty(cinema:estActeurMasculinDans))
+Declaration(ObjectProperty(cinema:estActriceDans))
+Declaration(ObjectProperty(cinema:estAssistantOperateurPour))
+Declaration(ObjectProperty(cinema:estBruiteurDans))
+Declaration(ObjectProperty(cinema:estCadreurPour))
+Declaration(ObjectProperty(cinema:estCascadeurDans))
+Declaration(ObjectProperty(cinema:estCascadeurDansFilm))
+Declaration(ObjectProperty(cinema:estCascadeurPourActeur))
+Declaration(ObjectProperty(cinema:estCascadeurPourRole))
+Declaration(ObjectProperty(cinema:estChefDecorateurPour))
+Declaration(ObjectProperty(cinema:estChefMonteurPour))
+Declaration(ObjectProperty(cinema:estCoiffeurPour))
+Declaration(ObjectProperty(cinema:estCostumierePour))
+Declaration(ObjectProperty(cinema:estDansDistributionArtistique))
+Declaration(ObjectProperty(cinema:estDecernePar))
+Declaration(ObjectProperty(cinema:estDirecteurPhotographiePour))
+Declaration(ObjectProperty(cinema:estDirecteurPostProductionPour))
+Declaration(ObjectProperty(cinema:estDoubleurDans))
+Declaration(ObjectProperty(cinema:estDoublureDans))
+Declaration(ObjectProperty(cinema:estDoublureDansFilm))
+Declaration(ObjectProperty(cinema:estEnsemblierPour))
+Declaration(ObjectProperty(cinema:estIncarnePar))
+Declaration(ObjectProperty(cinema:estIngenieurSonPour))
+Declaration(ObjectProperty(cinema:estLaDoublureDeActeur))
+Declaration(ObjectProperty(cinema:estLaDoublureDeRole))
+Declaration(ObjectProperty(cinema:estLeDoubleurDeActeur))
+Declaration(ObjectProperty(cinema:estLeDoubleurDeRole))
+Declaration(ObjectProperty(cinema:estLocalisePour))
+Declaration(ObjectProperty(cinema:estMaquilleurPour))
+Declaration(ObjectProperty(cinema:estMembreDeJuryPour))
+Declaration(ObjectProperty(cinema:estMixeurPour))
+Declaration(ObjectProperty(cinema:estMonteurSonPour))
+Declaration(ObjectProperty(cinema:estPerchmanPour))
+Declaration(ObjectProperty(cinema:estPhotographeDePlateauPour))
+Declaration(ObjectProperty(cinema:estPresidentDeJuryPour))
+Declaration(ObjectProperty(cinema:estRealisateurHomme))
+Declaration(ObjectProperty(cinema:estRealisatrice))
+Declaration(ObjectProperty(cinema:estRecompenseA))
+Declaration(ObjectProperty(cinema:estRecompensePour))
+Declaration(ObjectProperty(cinema:estRegisseurPour))
+Declaration(ObjectProperty(cinema:estSitueDans))
+Declaration(ObjectProperty(cinema:estTechnicienDecorPour))
+Declaration(ObjectProperty(cinema:estTechnicienHMCPour))
+Declaration(ObjectProperty(cinema:estTechnicienImagePour))
+Declaration(ObjectProperty(cinema:estTechnicienPostProductionPour))
+Declaration(ObjectProperty(cinema:estTechnicienPour))
+Declaration(ObjectProperty(cinema:estTechnicienSonPour))
+Declaration(ObjectProperty(cinema:estUneAdaptationDe))
+Declaration(ObjectProperty(cinema:estUneLocalisationDe))
+Declaration(ObjectProperty(cinema:filmAPourDoubleur))
+Declaration(ObjectProperty(cinema:filmAPourDoublure))
+Declaration(ObjectProperty(cinema:filmConcourePour))
+Declaration(ObjectProperty(cinema:incarne))
+Declaration(ObjectProperty(cinema:personneConcourePour))
+Declaration(ObjectProperty(cinema:recompense))
+Declaration(ObjectProperty(cinema:recompenseFilm))
+Declaration(ObjectProperty(cinema:recompensePersonne))
+Declaration(ObjectProperty(cinema:roleAPourCascadeur))
+Declaration(ObjectProperty(cinema:roleAPourDoublure))
+Declaration(ObjectProperty(cinema:roleDoublePar))
+Declaration(ObjectProperty(cinema:seDerouleDans))
+Declaration(ObjectProperty(owl:topObjectProperty))
+Declaration(DataProperty(terms:title))
+Declaration(DataProperty(cinema:aPourDate))
+Declaration(DataProperty(cinema:aPourDateDebut))
+Declaration(DataProperty(cinema:aPourDateFin))
+Declaration(DataProperty(cinema:aPourDateMort))
+Declaration(DataProperty(cinema:aPourDateNaissance))
+Declaration(DataProperty(cinema:aPourDateSortie))
+Declaration(DataProperty(cinema:aPourDureeMinutes))
+Declaration(DataProperty(cinema:aPourNationalite))
+Declaration(DataProperty(cinema:aPourNom))
+Declaration(DataProperty(cinema:aPourNombreDeMembreDeJury))
+Declaration(DataProperty(cinema:aPourPrenom))
+Declaration(DataProperty(cinema:aPourTitre))
+Declaration(DataProperty(foaf:familyName))
+Declaration(DataProperty(foaf:family_name))
+Declaration(DataProperty(foaf:firstName))
+Declaration(DataProperty(foaf:givenName))
+Declaration(DataProperty(foaf:givenname))
+Declaration(DataProperty(foaf:lastName))
+Declaration(NamedIndividual(cinema:AbstractionLyrique))
+Declaration(NamedIndividual(cinema:Action))
+Declaration(NamedIndividual(cinema:AlleMachtDerSuper8))
+Declaration(NamedIndividual(cinema:Amerique))
+Declaration(NamedIndividual(cinema:Aventure))
+Declaration(NamedIndividual(cinema:Battle_of_the_Year))
+Declaration(NamedIndividual(cinema:Belgique))
+Declaration(NamedIndividual(cinema:Cannes))
+Declaration(NamedIndividual(cinema:Catastrophe))
+Declaration(NamedIndividual(cinema:Christmas_in_Paris))
+Declaration(NamedIndividual(cinema:CinemaDirect))
+Declaration(NamedIndividual(cinema:CinemaModerne))
+Declaration(NamedIndividual(cinema:CinemaPur))
+Declaration(NamedIndividual(cinema:CinemaUnderground))
+Declaration(NamedIndividual(cinema:ClermontFerrand))
+Declaration(NamedIndividual(cinema:Comedie))
+Declaration(NamedIndividual(cinema:ComedieALItalienne))
+Declaration(NamedIndividual(cinema:Deauville))
+Declaration(NamedIndividual(cinema:Documentaire))
+Declaration(NamedIndividual(cinema:Dogme95))
+Declaration(NamedIndividual(cinema:Drame))
+Declaration(NamedIndividual(cinema:EcoleDeBarcelone))
+Declaration(NamedIndividual(cinema:EcoleDeBerlin))
+Declaration(NamedIndividual(cinema:Etats-Unis))
+Declaration(NamedIndividual(cinema:Expressionnisme))
+Declaration(NamedIndividual(cinema:Fantastique))
+Declaration(NamedIndividual(cinema:Feminin))
+Declaration(NamedIndividual(cinema:FilmNoir))
+Declaration(NamedIndividual(cinema:France))
+Declaration(NamedIndividual(cinema:FreeCinema))
+Declaration(NamedIndividual(cinema:Guerre))
+Declaration(NamedIndividual(cinema:Horreur))
+Declaration(NamedIndividual(cinema:Kammerspiel))
+Declaration(NamedIndividual(cinema:Kino))
+Declaration(NamedIndividual(cinema:Les_Intouchables))
+Declaration(NamedIndividual(cinema:Masculin))
+Declaration(NamedIndividual(cinema:Montpellier))
+Declaration(NamedIndividual(cinema:Mumblecore))
+Declaration(NamedIndividual(cinema:Neorealisme))
+Declaration(NamedIndividual(cinema:NewFrenchExtremism))
+Declaration(NamedIndividual(cinema:NonNarration))
+Declaration(NamedIndividual(cinema:NouveauCinemaAllemand))
+Declaration(NamedIndividual(cinema:NouvelHollywood))
+Declaration(NamedIndividual(cinema:NouvelleVague))
+Declaration(NamedIndividual(cinema:Oucipo))
+Declaration(NamedIndividual(cinema:Paris))
+Declaration(NamedIndividual(cinema:PremiereAvantGarde))
+Declaration(NamedIndividual(cinema:RealismePoetique))
+Declaration(NamedIndividual(cinema:RenouveauDuCinemaQuebecois))
+Declaration(NamedIndividual(cinema:Romance))
+Declaration(NamedIndividual(cinema:RésistanceDesCorps))
+Declaration(NamedIndividual(cinema:ScienceFiction))
+Declaration(NamedIndividual(cinema:TelephoneBlanc))
+Declaration(NamedIndividual(cinema:The_Da_Vinci_Code))
+Declaration(NamedIndividual(cinema:Western))
+Declaration(NamedIndividual(<http://www.irit.fr/recherches/MELODI/ontologies/FilmographieV1.owl#8th_Wonderland>))
+
+############################
+#   Object Properties
+############################
+
+# Object Property: cinema:FilmAPourRecompense (film has as reward )
+
+AnnotationAssertion(rdfs:comment cinema:FilmAPourRecompense "relie un film à sa récompense ou à celle d'un des contributeurs à ce film"@fr)
+AnnotationAssertion(rdfs:label cinema:FilmAPourRecompense "a pour récompense"@fr)
+AnnotationAssertion(rdfs:label cinema:FilmAPourRecompense "film has as reward "@en)
+SubObjectPropertyOf(cinema:FilmAPourRecompense cinema:aPourRecompense)
+InverseObjectProperties(cinema:FilmAPourRecompense cinema:recompenseFilm)
+ObjectPropertyDomain(cinema:FilmAPourRecompense cinema:Film)
+
+# Object Property: cinema:PersonneAPourRecompense (person has as reward)
+
+AnnotationAssertion(rdfs:comment cinema:PersonneAPourRecompense "relie une personne à sa récompense"@fr)
+AnnotationAssertion(rdfs:label cinema:PersonneAPourRecompense "a pour récompense"@fr)
+AnnotationAssertion(rdfs:label cinema:PersonneAPourRecompense "person has as reward"@en)
+SubObjectPropertyOf(cinema:PersonneAPourRecompense cinema:aPourRecompense)
+InverseObjectProperties(cinema:PersonneAPourRecompense cinema:recompensePersonne)
+ObjectPropertyDomain(cinema:PersonneAPourRecompense cinema:Personne)
+
+# Object Property: cinema:aEcritScenarioDe (has written the scenario of )
+
+AnnotationAssertion(rdfs:comment cinema:aEcritScenarioDe "une personne a écrit le scénario d'un film"@fr)
+AnnotationAssertion(rdfs:label cinema:aEcritScenarioDe "a écrit le scénario de"@fr)
+AnnotationAssertion(rdfs:label cinema:aEcritScenarioDe "est le scénariste de"@fr)
+AnnotationAssertion(rdfs:label cinema:aEcritScenarioDe "has written the scenario of "@en)
+AnnotationAssertion(rdfs:label cinema:aEcritScenarioDe "has written the screenplay of "@en)
+SubObjectPropertyOf(cinema:aEcritScenarioDe cinema:contribueArtistiquementAOeuvre)
+InverseObjectProperties(cinema:aEcritScenarioDe cinema:aPourScenariste)
+
+# Object Property: cinema:aFigureDans (a figuré dans)
+
+AnnotationAssertion(rdfs:label cinema:aFigureDans "a figuré dans"@fr)
+AnnotationAssertion(rdfs:label cinema:aFigureDans "est figurant dans"@fr)
+AnnotationAssertion(rdfs:label cinema:aFigureDans "est figurante dans"@fr)
+AnnotationAssertion(rdfs:label cinema:aFigureDans "has appeared in "@en)
+SubObjectPropertyOf(cinema:aFigureDans cinema:estActeurDeComplementDans)
+InverseObjectProperties(cinema:aFigureDans cinema:aPourFigurant)
+
+# Object Property: cinema:aPourActeur (has as actor)
+
+AnnotationAssertion(rdfs:label cinema:aPourActeur "a pour acteur"@fr)
+AnnotationAssertion(rdfs:label cinema:aPourActeur "has as actor"@en)
+SubObjectPropertyOf(cinema:aPourActeur cinema:aPourContributeurArtistique)
+InverseObjectProperties(cinema:aPourActeur cinema:estActeurDans)
+
+# Object Property: cinema:aPourActeurFemme (a pour actrice)
+
+AnnotationAssertion(rdfs:label cinema:aPourActeurFemme "a pour actrice"@fr)
+AnnotationAssertion(rdfs:label cinema:aPourActeurFemme "has as actress"@en)
+SubObjectPropertyOf(cinema:aPourActeurFemme cinema:aPourActeur)
+ObjectPropertyRange(cinema:aPourActeurFemme cinema:Femme)
+
+# Object Property: cinema:aPourActeurHomme (has as actor)
+
+AnnotationAssertion(rdfs:label cinema:aPourActeurHomme "a pour acteur "@fr)
+AnnotationAssertion(rdfs:label cinema:aPourActeurHomme "has as actor"@en)
+SubObjectPropertyOf(cinema:aPourActeurHomme cinema:aPourActeur)
+ObjectPropertyRange(cinema:aPourActeurHomme cinema:Homme)
+
+# Object Property: cinema:aPourAdaptation (has as adaptation)
+
+AnnotationAssertion(rdfs:label cinema:aPourAdaptation "a pour adaptation"@fr)
+AnnotationAssertion(rdfs:label cinema:aPourAdaptation "has as adaptation"@en)
+InverseObjectProperties(cinema:aPourAdaptation cinema:estUneAdaptationDe)
+
+# Object Property: cinema:aPourContributeur (a pour contributeur)
+
+AnnotationAssertion(rdfs:label cinema:aPourContributeur "a pour contributeur"@fr)
+AnnotationAssertion(rdfs:label cinema:aPourContributeur "has as contributor"@en)
+InverseObjectProperties(cinema:aPourContributeur cinema:contribueAOeuvre)
+ObjectPropertyDomain(cinema:aPourContributeur cinema:Oeuvre)
+
+# Object Property: cinema:aPourContributeurArtistique (has as artistic contributor)
+
+AnnotationAssertion(rdfs:label cinema:aPourContributeurArtistique "a pour contributeur artistique"@fr)
+AnnotationAssertion(rdfs:label cinema:aPourContributeurArtistique "has as artistic contributor"@en)
+SubObjectPropertyOf(cinema:aPourContributeurArtistique cinema:aPourContributeur)
+InverseObjectProperties(cinema:aPourContributeurArtistique cinema:contribueArtistiquementAOeuvre)
+ObjectPropertyDomain(cinema:aPourContributeurArtistique cinema:OeuvreArtistique)
+
+# Object Property: cinema:aPourFigurant (a pour figurant)
+
+AnnotationAssertion(rdfs:label cinema:aPourFigurant "a pour figurant"@fr)
+AnnotationAssertion(rdfs:label cinema:aPourFigurant "has as figurant"@en)
+SubObjectPropertyOf(cinema:aPourFigurant cinema:aPourContributeurArtistique)
+
+# Object Property: cinema:aPourGenre (est du genre)
+
+AnnotationAssertion(rdfs:label cinema:aPourGenre "a pour genre"@fr)
+AnnotationAssertion(rdfs:label cinema:aPourGenre "est du genre"@fr)
+AnnotationAssertion(rdfs:label cinema:aPourGenre "has as genre"@en)
+ObjectPropertyDomain(cinema:aPourGenre cinema:OeuvreArtistique)
+ObjectPropertyRange(cinema:aPourGenre cinema:Genre)
+
+# Object Property: cinema:aPourLieu (has as location )
+
+AnnotationAssertion(rdfs:label cinema:aPourLieu "a pour lieu"@fr)
+AnnotationAssertion(rdfs:label cinema:aPourLieu "has as location "@en)
+AnnotationAssertion(rdfs:label cinema:aPourLieu "has as place"@en)
+ObjectPropertyRange(cinema:aPourLieu cinema:Lieu)
+
+# Object Property: cinema:aPourLieuDeTournage (est tourne à/en/dans)
+
+AnnotationAssertion(rdfs:label cinema:aPourLieuDeTournage "a pour lieu de tournage"@fr)
+AnnotationAssertion(rdfs:label cinema:aPourLieuDeTournage "est tourne à/en/dans"@fr)
+AnnotationAssertion(rdfs:label cinema:aPourLieuDeTournage "has as filming location "@en)
+SubObjectPropertyOf(cinema:aPourLieuDeTournage cinema:aPourLieu)
+ObjectPropertyDomain(cinema:aPourLieuDeTournage cinema:Film)
+
+# Object Property: cinema:aPourLieuMort (has as place of death)
+
+AnnotationAssertion(rdfs:comment cinema:aPourLieuMort "est mort à/en/dans"@fr)
+AnnotationAssertion(rdfs:label cinema:aPourLieuMort "a pour lieu de mort"@fr)
+AnnotationAssertion(rdfs:label cinema:aPourLieuMort "est mort en"@fr)
+AnnotationAssertion(rdfs:label cinema:aPourLieuMort "est mort à"@fr)
+AnnotationAssertion(rdfs:label cinema:aPourLieuMort "has as place of death"@en)
+SubObjectPropertyOf(cinema:aPourLieuMort cinema:aPourLieu)
+ObjectPropertyDomain(cinema:aPourLieuMort cinema:Personne)
+
+# Object Property: cinema:aPourLieuNaissance (a pour lieu de naissance)
+
+AnnotationAssertion(rdfs:label cinema:aPourLieuNaissance "a pour lieu de naissance"@fr)
+AnnotationAssertion(rdfs:label cinema:aPourLieuNaissance "est né à/en/dans"@fr)
+AnnotationAssertion(rdfs:label cinema:aPourLieuNaissance "has as birthplace"@en)
+AnnotationAssertion(rdfs:label cinema:aPourLieuNaissance "lieu naissance"@fr)
+SubObjectPropertyOf(cinema:aPourLieuNaissance cinema:aPourLieu)
+ObjectPropertyDomain(cinema:aPourLieuNaissance cinema:Personne)
+
+# Object Property: cinema:aPourLocalisation (has as localisation)
+
+AnnotationAssertion(rdfs:label cinema:aPourLocalisation "aPourLocalisation"@fr)
+AnnotationAssertion(rdfs:label cinema:aPourLocalisation "has as localisation"@en)
+AnnotationAssertion(rdfs:label cinema:aPourLocalisation "has as place"@en)
+InverseObjectProperties(cinema:aPourLocalisation cinema:estUneLocalisationDe)
+
+# Object Property: cinema:aPourMembreDeJury (a pour membre de jury)
+
+AnnotationAssertion(rdfs:label cinema:aPourMembreDeJury "a pour membre de jury"@fr)
+AnnotationAssertion(rdfs:label cinema:aPourMembreDeJury "has as jury member"@en)
+InverseObjectProperties(cinema:aPourMembreDeJury cinema:estMembreDeJuryPour)
+
+# Object Property: cinema:aPourOrigineGeographique (has as geographical origin)
+
+AnnotationAssertion(rdfs:comment cinema:aPourOrigineGeographique "origine de quelque-chose qui n'est pas vivant (courant cinématographique, genre...)"@fr)
+AnnotationAssertion(rdfs:label cinema:aPourOrigineGeographique "a pour origine géographique"@fr)
+AnnotationAssertion(rdfs:label cinema:aPourOrigineGeographique "has as geographical origin"@en)
+SubObjectPropertyOf(cinema:aPourOrigineGeographique cinema:aPourLieu)
+
+# Object Property: cinema:aPourPaysOrigine (cinema:aPourPaysOrigine)
+
+ObjectPropertyDomain(cinema:aPourPaysOrigine cinema:Film)
+ObjectPropertyRange(cinema:aPourPaysOrigine cinema:Pays)
+
+# Object Property: cinema:aPourPresident (a pour président)
+
+AnnotationAssertion(rdfs:label cinema:aPourPresident "a pour président"@fr)
+AnnotationAssertion(rdfs:label cinema:aPourPresident "a pour président de jury"@fr)
+AnnotationAssertion(rdfs:label cinema:aPourPresident "has as jury's president "@en)
+AnnotationAssertion(rdfs:label cinema:aPourPresident "has as president"@en)
+SubObjectPropertyOf(cinema:aPourPresident cinema:aPourMembreDeJury)
+
+# Object Property: cinema:aPourProducteur (has as producer)
+
+AnnotationAssertion(rdfs:label cinema:aPourProducteur "a pour producteur"@fr)
+AnnotationAssertion(rdfs:label cinema:aPourProducteur "has as producer"@en)
+SubObjectPropertyOf(cinema:aPourProducteur cinema:aPourContributeur)
+InverseObjectProperties(cinema:aPourProducteur cinema:aProduit)
+
+# Object Property: cinema:aPourRealisateur (has as director)
+
+AnnotationAssertion(rdfs:label cinema:aPourRealisateur "a pour realisateur"@fr)
+AnnotationAssertion(rdfs:label cinema:aPourRealisateur "has as director"@en)
+SubObjectPropertyOf(cinema:aPourRealisateur cinema:aPourContributeurArtistique)
+InverseObjectProperties(cinema:aPourRealisateur cinema:aRealise)
+
+# Object Property: cinema:aPourRecompense (has as reward)
+
+AnnotationAssertion(rdfs:label cinema:aPourRecompense "a dans son palmarès"@fr)
+AnnotationAssertion(rdfs:label cinema:aPourRecompense "a pour récompense")
+AnnotationAssertion(rdfs:label cinema:aPourRecompense "has as reward"@en)
+InverseObjectProperties(cinema:aPourRecompense cinema:recompense)
+ObjectPropertyRange(cinema:aPourRecompense cinema:PrixDecerne)
+
+# Object Property: cinema:aPourRole (has as role)
+
+AnnotationAssertion(rdfs:comment cinema:aPourRole "les rôles qu'il y a dans une oeuvre"@fr)
+AnnotationAssertion(rdfs:label cinema:aPourRole "a pour rôle"@fr)
+AnnotationAssertion(rdfs:label cinema:aPourRole "has as role"@en)
+InverseObjectProperties(cinema:aPourRole cinema:apparaitDans)
+ObjectPropertyDomain(cinema:aPourRole cinema:OeuvreArtistique)
+ObjectPropertyRange(cinema:aPourRole cinema:Role)
+
+# Object Property: cinema:aPourScenariste (has as screenwriter)
+
+AnnotationAssertion(rdfs:label cinema:aPourScenariste "a pour scenariste"@fr)
+AnnotationAssertion(rdfs:label cinema:aPourScenariste "has as scenarist"@en)
+AnnotationAssertion(rdfs:label cinema:aPourScenariste "has as screenwriter"@en)
+SubObjectPropertyOf(cinema:aPourScenariste cinema:aPourContributeurArtistique)
+
+# Object Property: cinema:aPourSexe (has as gender)
+
+AnnotationAssertion(rdfs:label cinema:aPourSexe "a pour sexe"@fr)
+AnnotationAssertion(rdfs:label cinema:aPourSexe "has as gender"@en)
+FunctionalObjectProperty(cinema:aPourSexe)
+ObjectPropertyDomain(cinema:aPourSexe cinema:Personne)
+ObjectPropertyRange(cinema:aPourSexe cinema:Sexe)
+
+# Object Property: cinema:aPourTechnicien (a pour technicien)
+
+AnnotationAssertion(rdfs:label cinema:aPourTechnicien "a pour technicien"@fr)
+SubObjectPropertyOf(cinema:aPourTechnicien cinema:aPourContributeur)
+InverseObjectProperties(cinema:aPourTechnicien cinema:estTechnicienPour)
+
+# Object Property: cinema:aPourTechnique (has as technique)
+
+AnnotationAssertion(rdfs:label cinema:aPourTechnique "a pour technique"@fr)
+AnnotationAssertion(rdfs:label cinema:aPourTechnique "has as technique"@en)
+ObjectPropertyDomain(cinema:aPourTechnique cinema:Oeuvre)
+ObjectPropertyRange(cinema:aPourTechnique cinema:Technique)
+
+# Object Property: cinema:aPourTechniqueDAnimation (a pour technique d'animation)
+
+AnnotationAssertion(rdfs:label cinema:aPourTechniqueDAnimation "a pour technique d'animation"@fr)
+AnnotationAssertion(rdfs:label cinema:aPourTechniqueDAnimation "has as animation techique"@en)
+SubObjectPropertyOf(cinema:aPourTechniqueDAnimation cinema:aPourTechnique)
+
+# Object Property: cinema:aPourTechniqueDePriseDeSon (has as sound recording technique)
+
+AnnotationAssertion(rdfs:label cinema:aPourTechniqueDePriseDeSon "a pour technique de prise de son"@fr)
+AnnotationAssertion(rdfs:label cinema:aPourTechniqueDePriseDeSon "has as sound recording technique"@en)
+SubObjectPropertyOf(cinema:aPourTechniqueDePriseDeSon cinema:aPourTechnique)
+
+# Object Property: cinema:aPourTechniqueDePriseDeVues (has as shooting technique)
+
+AnnotationAssertion(rdfs:label cinema:aPourTechniqueDePriseDeVues "a pour technique de prise de vues"@fr)
+AnnotationAssertion(rdfs:label cinema:aPourTechniqueDePriseDeVues "has as shooting technique"@en)
+SubObjectPropertyOf(cinema:aPourTechniqueDePriseDeVues cinema:aPourTechnique)
+
+# Object Property: cinema:aProduit (a produit)
+
+AnnotationAssertion(rdfs:label cinema:aProduit "a produit"@fr)
+AnnotationAssertion(rdfs:label cinema:aProduit "est le producteur de"@fr)
+AnnotationAssertion(rdfs:label cinema:aProduit "has producted"@en)
+SubObjectPropertyOf(cinema:aProduit cinema:contribueAOeuvre)
+SubObjectPropertyOf(cinema:aProduit cinema:contribueArtistiquementAOeuvre)
+
+# Object Property: cinema:aRealise (est le réalisateur de)
+
+AnnotationAssertion(rdfs:label cinema:aRealise "a réalisé"@fr)
+AnnotationAssertion(rdfs:label cinema:aRealise "est le réalisateur de"@fr)
+AnnotationAssertion(rdfs:label cinema:aRealise "has realised"@en)
+SubObjectPropertyOf(cinema:aRealise cinema:contribueArtistiquementAOeuvre)
+
+# Object Property: cinema:acteurAPourCascadeur (actor has as stuntman)
+
+AnnotationAssertion(rdfs:label cinema:acteurAPourCascadeur "actor has as stunt performer"@en)
+AnnotationAssertion(rdfs:label cinema:acteurAPourCascadeur "actor has as stuntman"@en)
+SubObjectPropertyOf(cinema:acteurAPourCascadeur cinema:acteurAPourDoublure)
+InverseObjectProperties(cinema:acteurAPourCascadeur cinema:estCascadeurPourActeur)
+
+# Object Property: cinema:acteurAPourDoublure (a pour doublure)
+
+AnnotationAssertion(rdfs:label cinema:acteurAPourDoublure "a pour doublure"@fr)
+InverseObjectProperties(cinema:acteurAPourDoublure cinema:estLaDoublureDeActeur)
+ObjectPropertyDomain(cinema:acteurAPourDoublure cinema:Personne)
+ObjectPropertyRange(cinema:acteurAPourDoublure cinema:Personne)
+
+# Object Property: cinema:acteurDoublePar (is doubled by )
+
+AnnotationAssertion(rdfs:comment cinema:acteurDoublePar "relation entre un acteur et un doubleur ayant doublé au moins une fois cet acteur"@fr)
+AnnotationAssertion(rdfs:label cinema:acteurDoublePar "a pour doubleur"@fr)
+AnnotationAssertion(rdfs:label cinema:acteurDoublePar "doublé par"@fr)
+AnnotationAssertion(rdfs:label cinema:acteurDoublePar "est doublé par"@fr)
+AnnotationAssertion(rdfs:label cinema:acteurDoublePar "is doubled by "@en)
+InverseObjectProperties(cinema:acteurDoublePar cinema:estLeDoubleurDeActeur)
+ObjectPropertyRange(cinema:acteurDoublePar cinema:Personne)
+
+# Object Property: cinema:apparaitDans (appears in )
+
+AnnotationAssertion(rdfs:comment cinema:apparaitDans "relation entre un rôle et une oeuvre dans laquelle ce rôle apparait"@fr)
+AnnotationAssertion(rdfs:label cinema:apparaitDans "apparait dans"@fr)
+AnnotationAssertion(rdfs:label cinema:apparaitDans "appears in "@en)
+
+# Object Property: cinema:competitionRecompense (CompetitionRecompense)
+
+AnnotationAssertion(rdfs:label cinema:competitionRecompense "CompetitionRecompense"@fr)
+AnnotationAssertion(rdfs:label cinema:competitionRecompense "competition reward"@en)
+InverseObjectProperties(cinema:competitionRecompense cinema:estRecompenseA)
+
+# Object Property: cinema:concourtPourCompetition (concourt)
+
+AnnotationAssertion(rdfs:label cinema:concourtPourCompetition "compete for competition "@en)
+AnnotationAssertion(rdfs:label cinema:concourtPourCompetition "concourt"@fr)
+AnnotationAssertion(rdfs:label cinema:concourtPourCompetition "concourt pour compétition"@en)
+ObjectPropertyDomain(cinema:concourtPourCompetition cinema:Oeuvre)
+ObjectPropertyRange(cinema:concourtPourCompetition cinema:Competition)
+
+# Object Property: cinema:concourtPourPrix (is nominated for)
+
+AnnotationAssertion(rdfs:comment cinema:concourtPourPrix "une oeuvre ou une personne qui concoure pour un prix"@fr)
+AnnotationAssertion(rdfs:label cinema:concourtPourPrix "compete for "@en)
+AnnotationAssertion(rdfs:label cinema:concourtPourPrix "concourt pour"@fr)
+AnnotationAssertion(rdfs:label cinema:concourtPourPrix "est nominé pour"@fr)
+AnnotationAssertion(rdfs:label cinema:concourtPourPrix "is nominated for"@en)
+ObjectPropertyRange(cinema:concourtPourPrix cinema:PrixDecerne)
+
+# Object Property: cinema:contribueAOeuvre (participe à)
+
+AnnotationAssertion(rdfs:label cinema:contribueAOeuvre "contribue à"@fr)
+AnnotationAssertion(rdfs:label cinema:contribueAOeuvre "contribue à ouvre"@fr)
+AnnotationAssertion(rdfs:label cinema:contribueAOeuvre "contributes to work"@en)
+AnnotationAssertion(rdfs:label cinema:contribueAOeuvre "impliquer dans"@fr)
+AnnotationAssertion(rdfs:label cinema:contribueAOeuvre "participe à"@fr)
+SubObjectPropertyOf(cinema:contribueAOeuvre cinema:estDansDistributionArtistique)
+ObjectPropertyDomain(cinema:contribueAOeuvre cinema:Personne)
+
+# Object Property: cinema:contribueArtistiquementAOeuvre (participe artistiquement à)
+
+AnnotationAssertion(rdfs:label cinema:contribueArtistiquementAOeuvre "contribue artistiquement à"@fr)
+AnnotationAssertion(rdfs:label cinema:contribueArtistiquementAOeuvre "contributes artistically to"@en)
+AnnotationAssertion(rdfs:label cinema:contribueArtistiquementAOeuvre "participe artistiquement à"@fr)
+SubObjectPropertyOf(cinema:contribueArtistiquementAOeuvre cinema:contribueAOeuvre)
+ObjectPropertyDomain(cinema:contribueArtistiquementAOeuvre cinema:Artiste)
+ObjectPropertyRange(cinema:contribueArtistiquementAOeuvre cinema:OeuvreArtistique)
+
+# Object Property: cinema:decerne (donne prix)
+
+AnnotationAssertion(rdfs:label cinema:decerne "awards"@en)
+AnnotationAssertion(rdfs:label cinema:decerne "donne prix"@fr)
+AnnotationAssertion(rdfs:label cinema:decerne "décerne"@fr)
+InverseObjectProperties(cinema:decerne cinema:estDecernePar)
+ObjectPropertyDomain(cinema:decerne cinema:Competition)
+ObjectPropertyRange(cinema:decerne cinema:PrixDecerne)
+
+# Object Property: cinema:estAccessoiristePour (est accessoiriste pour)
+
+AnnotationAssertion(rdfs:label cinema:estAccessoiristePour "est accessoiriste pour"@fr)
+AnnotationAssertion(rdfs:label cinema:estAccessoiristePour "is prop man for "@en)
+SubObjectPropertyOf(cinema:estAccessoiristePour cinema:estTechnicienDecorPour)
+
+# Object Property: cinema:estActeurDans (is actor in )
+
+AnnotationAssertion(rdfs:comment cinema:estActeurDans "même si c est hors domaine, on ne met pas de range parce qu un acteur peut jouer dans autre chose qu un film"@fr)
+AnnotationAssertion(rdfs:label cinema:estActeurDans "a joué dans"@fr)
+AnnotationAssertion(rdfs:label cinema:estActeurDans "est acteur dans"@fr)
+AnnotationAssertion(rdfs:label cinema:estActeurDans "est comédien dans")
+AnnotationAssertion(rdfs:label cinema:estActeurDans "is actor in "@en)
+AnnotationAssertion(rdfs:label cinema:estActeurDans "played in "@en)
+SubObjectPropertyOf(cinema:estActeurDans cinema:contribueArtistiquementAOeuvre)
+SubObjectPropertyOf(cinema:estActeurDans cinema:estDansDistributionArtistique)
+
+# Object Property: cinema:estActeurDeComplementDans (estActeurDeComplementDans)
+
+AnnotationAssertion(rdfs:label cinema:estActeurDeComplementDans "estActeurDeComplementDans"@fr)
+SubObjectPropertyOf(cinema:estActeurDeComplementDans cinema:estActeurDans)
+
+# Object Property: cinema:estActeurMasculinDans (est acteur masculin dans)
+
+AnnotationAssertion(rdfs:label cinema:estActeurMasculinDans "est acteur masculin dans"@fr)
+AnnotationAssertion(rdfs:label cinema:estActeurMasculinDans "is actor in"@en)
+SubObjectPropertyOf(cinema:estActeurMasculinDans cinema:estActeurDans)
+ObjectPropertyDomain(cinema:estActeurMasculinDans cinema:Homme)
+
+# Object Property: cinema:estActriceDans (is actress in)
+
+AnnotationAssertion(rdfs:comment cinema:estActriceDans "il est possible de vouloir distinguer les réalisateurs en fonction de leur sexe"@fr)
+AnnotationAssertion(rdfs:label cinema:estActriceDans "est actrice dans"@fr)
+AnnotationAssertion(rdfs:label cinema:estActriceDans "is actress in"@en)
+SubObjectPropertyOf(cinema:estActriceDans cinema:estActeurDans)
+ObjectPropertyDomain(cinema:estActriceDans cinema:Femme)
+
+# Object Property: cinema:estAssistantOperateurPour (est assistant opérateur pour)
+
+AnnotationAssertion(rdfs:label cinema:estAssistantOperateurPour "est assistant opérateur pour"@fr)
+AnnotationAssertion(rdfs:label cinema:estAssistantOperateurPour "is operator for "@en)
+SubObjectPropertyOf(cinema:estAssistantOperateurPour cinema:estTechnicienImagePour)
+
+# Object Property: cinema:estBruiteurDans (is sound effect technician in)
+
+AnnotationAssertion(rdfs:label cinema:estBruiteurDans "est bruiteur dans"@fr)
+AnnotationAssertion(rdfs:label cinema:estBruiteurDans "est bruiteuse dans"@fr)
+AnnotationAssertion(rdfs:label cinema:estBruiteurDans "is sound effect technician in"@en)
+SubObjectPropertyOf(cinema:estBruiteurDans cinema:estActeurDeComplementDans)
+
+# Object Property: cinema:estCadreurPour (is cameraman for)
+
+AnnotationAssertion(rdfs:label cinema:estCadreurPour "est cadreur pour"@fr)
+AnnotationAssertion(rdfs:label cinema:estCadreurPour "is cameraman for"@en)
+SubObjectPropertyOf(cinema:estCadreurPour cinema:estTechnicienImagePour)
+
+# Object Property: cinema:estCascadeurDans (is stuntman in)
+
+AnnotationAssertion(rdfs:label cinema:estCascadeurDans "est cascadeur dans"@fr)
+AnnotationAssertion(rdfs:label cinema:estCascadeurDans "est cascadeuse dans"@fr)
+AnnotationAssertion(rdfs:label cinema:estCascadeurDans "is stunt performer in"@en)
+AnnotationAssertion(rdfs:label cinema:estCascadeurDans "is stuntman in"@en)
+SubObjectPropertyOf(cinema:estCascadeurDans cinema:estActeurDeComplementDans)
+
+# Object Property: cinema:estCascadeurDansFilm (is stunt performer in film)
+
+AnnotationAssertion(rdfs:label cinema:estCascadeurDansFilm "est cascadeur dans film"@fr)
+AnnotationAssertion(rdfs:label cinema:estCascadeurDansFilm "is stunt performer in film"@en)
+AnnotationAssertion(rdfs:label cinema:estCascadeurDansFilm "is stuntman in film"@en)
+SubObjectPropertyOf(cinema:estCascadeurDansFilm cinema:estDoublureDansFilm)
+
+# Object Property: cinema:estCascadeurPourActeur (is the stuntman for actor)
+
+AnnotationAssertion(rdfs:label cinema:estCascadeurPourActeur "effectue les cascades pour"@fr)
+AnnotationAssertion(rdfs:label cinema:estCascadeurPourActeur "est cascadeur pour acteur"@fr)
+AnnotationAssertion(rdfs:label cinema:estCascadeurPourActeur "is the stunt perfomer for actor"@en)
+AnnotationAssertion(rdfs:label cinema:estCascadeurPourActeur "is the stuntman for actor"@en)
+SubObjectPropertyOf(cinema:estCascadeurPourActeur cinema:estLaDoublureDeActeur)
+
+# Object Property: cinema:estCascadeurPourRole (effectue les cascades de)
+
+AnnotationAssertion(rdfs:label cinema:estCascadeurPourRole "effectue les cascades de"@fr)
+AnnotationAssertion(rdfs:label cinema:estCascadeurPourRole "est cascadeur pour role"@fr)
+AnnotationAssertion(rdfs:label cinema:estCascadeurPourRole "is stuntman for role "@en)
+SubObjectPropertyOf(cinema:estCascadeurPourRole cinema:estLaDoublureDeRole)
+InverseObjectProperties(cinema:estCascadeurPourRole cinema:roleAPourCascadeur)
+
+# Object Property: cinema:estChefDecorateurPour (is head decorator for)
+
+AnnotationAssertion(rdfs:label cinema:estChefDecorateurPour "est chef décorateur pour"@fr)
+AnnotationAssertion(rdfs:label cinema:estChefDecorateurPour "is head decorator for"@en)
+SubObjectPropertyOf(cinema:estChefDecorateurPour cinema:estEnsemblierPour)
+
+# Object Property: cinema:estChefMonteurPour (est chef monteur pour)
+
+AnnotationAssertion(rdfs:label cinema:estChefMonteurPour "est chef monteur pour"@fr)
+AnnotationAssertion(rdfs:label cinema:estChefMonteurPour "is head editor for"@en)
+SubObjectPropertyOf(cinema:estChefMonteurPour cinema:estTechnicienPostProductionPour)
+
+# Object Property: cinema:estCoiffeurPour (est coiffeur pour)
+
+AnnotationAssertion(rdfs:label cinema:estCoiffeurPour "est coiffeur pour"@fr)
+AnnotationAssertion(rdfs:label cinema:estCoiffeurPour "is hairdresser for"@en)
+SubObjectPropertyOf(cinema:estCoiffeurPour cinema:estTechnicienHMCPour)
+
+# Object Property: cinema:estCostumierePour (est costumière pour)
+
+AnnotationAssertion(rdfs:label cinema:estCostumierePour "est costumière pour"@fr)
+AnnotationAssertion(rdfs:label cinema:estCostumierePour "is costume designer for"@en)
+SubObjectPropertyOf(cinema:estCostumierePour cinema:estTechnicienHMCPour)
+
+# Object Property: cinema:estDansDistributionArtistique (fait partie du casting de)
+
+AnnotationAssertion(rdfs:label cinema:estDansDistributionArtistique "fait partie du casting de"@fr)
+SubObjectPropertyOf(cinema:estDansDistributionArtistique cinema:contribueAOeuvre)
+
+# Object Property: cinema:estDecernePar (is awarded by)
+
+AnnotationAssertion(rdfs:label cinema:estDecernePar "est décerné par"@fr)
+AnnotationAssertion(rdfs:label cinema:estDecernePar "is awarded by"@en)
+FunctionalObjectProperty(cinema:estDecernePar)
+ObjectPropertyDomain(cinema:estDecernePar cinema:PrixDecerne)
+ObjectPropertyRange(cinema:estDecernePar cinema:Competition)
+
+# Object Property: cinema:estDirecteurPhotographiePour (est chef opérateur de prises de vues pour)
+
+AnnotationAssertion(rdfs:label cinema:estDirecteurPhotographiePour "est chef opérateur de prises de vues pour"@fr)
+AnnotationAssertion(rdfs:label cinema:estDirecteurPhotographiePour "est directeur de la photographie pour"@fr)
+AnnotationAssertion(rdfs:label cinema:estDirecteurPhotographiePour "is director of photography for"@en)
+SubObjectPropertyOf(cinema:estDirecteurPhotographiePour cinema:estTechnicienImagePour)
+
+# Object Property: cinema:estDirecteurPostProductionPour (est directeur post production pour)
+
+AnnotationAssertion(rdfs:label cinema:estDirecteurPostProductionPour "est directeur post production pour"@fr)
+AnnotationAssertion(rdfs:label cinema:estDirecteurPostProductionPour "is post production director for"@en)
+SubObjectPropertyOf(cinema:estDirecteurPostProductionPour cinema:estTechnicienPostProductionPour)
+
+# Object Property: cinema:estDoubleurDans (est doubleur dans)
+
+AnnotationAssertion(rdfs:label cinema:estDoubleurDans "a doublé quelqu'un dans"@fr)
+AnnotationAssertion(rdfs:label cinema:estDoubleurDans "est doubleur dans"@fr)
+AnnotationAssertion(rdfs:label cinema:estDoubleurDans "est doubleuse"@fr)
+AnnotationAssertion(rdfs:label cinema:estDoubleurDans "is doubler in "@en)
+SubObjectPropertyOf(cinema:estDoubleurDans cinema:estActeurDeComplementDans)
+InverseObjectProperties(cinema:estDoubleurDans cinema:filmAPourDoubleur)
+
+# Object Property: cinema:estDoublureDans (est doublure dans)
+
+AnnotationAssertion(rdfs:label cinema:estDoublureDans "est doublure dans"@fr)
+SubObjectPropertyOf(cinema:estDoublureDans cinema:estActeurDeComplementDans)
+InverseObjectProperties(cinema:estDoublureDans cinema:filmAPourDoublure)
+
+# Object Property: cinema:estDoublureDansFilm (est doublure dans film)
+
+AnnotationAssertion(rdfs:comment cinema:estDoublureDansFilm "permet d'inférer le film dans lequel la doublure à partir du role doubler"@fr)
+AnnotationAssertion(rdfs:label cinema:estDoublureDansFilm "est doublure dans film"@fr)
+AnnotationAssertion(rdfs:label cinema:estDoublureDansFilm "is doubler in film"@en)
+
+# Object Property: cinema:estEnsemblierPour (est ensemblier pour)
+
+AnnotationAssertion(rdfs:label cinema:estEnsemblierPour "est décorateur ensemblier pour"@fr)
+AnnotationAssertion(rdfs:label cinema:estEnsemblierPour "est décorateur pour"@fr)
+AnnotationAssertion(rdfs:label cinema:estEnsemblierPour "est ensemblier pour"@fr)
+AnnotationAssertion(rdfs:label cinema:estEnsemblierPour "is decorator for"@en)
+SubObjectPropertyOf(cinema:estEnsemblierPour cinema:estTechnicienDecorPour)
+
+# Object Property: cinema:estIncarnePar (est incarné par)
+
+AnnotationAssertion(rdfs:label cinema:estIncarnePar "est incarné par"@fr)
+AnnotationAssertion(rdfs:label cinema:estIncarnePar "is played by "@en)
+SubObjectPropertyOf(cinema:estIncarnePar owl:topObjectProperty)
+InverseObjectProperties(cinema:estIncarnePar cinema:incarne)
+ObjectPropertyDomain(cinema:estIncarnePar cinema:Role)
+ObjectPropertyRange(cinema:estIncarnePar cinema:Personne)
+
+# Object Property: cinema:estIngenieurSonPour (is sound engineer for)
+
+AnnotationAssertion(rdfs:label cinema:estIngenieurSonPour "est chef-opérateur du son pour"@fr)
+AnnotationAssertion(rdfs:label cinema:estIngenieurSonPour "est ingénieur du son pour"@fr)
+AnnotationAssertion(rdfs:label cinema:estIngenieurSonPour "is sound engineer for"@en)
+SubObjectPropertyOf(cinema:estIngenieurSonPour cinema:estTechnicienSonPour)
+
+# Object Property: cinema:estLaDoublureDeActeur (is the doubler of actor)
+
+AnnotationAssertion(rdfs:label cinema:estLaDoublureDeActeur "double"@fr)
+AnnotationAssertion(rdfs:label cinema:estLaDoublureDeActeur "est la doublure d'acteur"@fr)
+AnnotationAssertion(rdfs:label cinema:estLaDoublureDeActeur "est la doublure de"@fr)
+AnnotationAssertion(rdfs:label cinema:estLaDoublureDeActeur "is the doubler of actor"@en)
+
+# Object Property: cinema:estLaDoublureDeRole (is the doubler of role )
+
+AnnotationAssertion(rdfs:label cinema:estLaDoublureDeRole "double"@fr)
+AnnotationAssertion(rdfs:label cinema:estLaDoublureDeRole "est la doublure de "@fr)
+AnnotationAssertion(rdfs:label cinema:estLaDoublureDeRole "is the doubler of role "@en)
+InverseObjectProperties(cinema:estLaDoublureDeRole cinema:roleAPourDoublure)
+ObjectPropertyDomain(cinema:estLaDoublureDeRole cinema:Personne)
+ObjectPropertyRange(cinema:estLaDoublureDeRole cinema:Role)
+
+# Object Property: cinema:estLeDoubleurDeActeur (est le doubleur d'acteur)
+
+AnnotationAssertion(rdfs:comment cinema:estLeDoubleurDeActeur "relation entre un doubleur et l'acteur qu'il a doublé"@fr)
+AnnotationAssertion(rdfs:label cinema:estLeDoubleurDeActeur "double l'acteur"@fr)
+AnnotationAssertion(rdfs:label cinema:estLeDoubleurDeActeur "est le doubleur d'acteur"@fr)
+AnnotationAssertion(rdfs:label cinema:estLeDoubleurDeActeur "is the doubler of actor"@en)
+SubObjectPropertyOf(cinema:estLeDoubleurDeActeur owl:topObjectProperty)
+ObjectPropertyRange(cinema:estLeDoubleurDeActeur cinema:Personne)
+
+# Object Property: cinema:estLeDoubleurDeRole (is the doubler of role)
+
+AnnotationAssertion(rdfs:comment cinema:estLeDoubleurDeRole "relation entre un doubleur et le rôle qu'il a doublé"@fr)
+AnnotationAssertion(rdfs:label cinema:estLeDoubleurDeRole "est le doubleur de role"@fr)
+AnnotationAssertion(rdfs:label cinema:estLeDoubleurDeRole "is the doubler of role"@en)
+SubObjectPropertyOf(cinema:estLeDoubleurDeRole owl:topObjectProperty)
+InverseObjectProperties(cinema:estLeDoubleurDeRole cinema:roleDoublePar)
+
+# Object Property: cinema:estLocalisePour (is localised for)
+
+AnnotationAssertion(rdfs:comment cinema:estLocalisePour "relation entre un film localisé et la zone géographique pour laquelle il a été localisé"@fr)
+AnnotationAssertion(rdfs:label cinema:estLocalisePour "est localisé pour"@fr)
+AnnotationAssertion(rdfs:label cinema:estLocalisePour "is localised for"@en)
+ObjectPropertyDomain(cinema:estLocalisePour cinema:OeuvreLocalisee)
+ObjectPropertyRange(cinema:estLocalisePour cinema:AireGeographique)
+
+# Object Property: cinema:estMaquilleurPour (est maquilleur pour)
+
+AnnotationAssertion(rdfs:label cinema:estMaquilleurPour "est maquilleur pour"@fr)
+AnnotationAssertion(rdfs:label cinema:estMaquilleurPour "is make-up technician"@en)
+SubObjectPropertyOf(cinema:estMaquilleurPour cinema:estTechnicienHMCPour)
+
+# Object Property: cinema:estMembreDeJuryPour (est membre du jury pour)
+
+AnnotationAssertion(rdfs:comment cinema:estMembreDeJuryPour "relation entre une personne et une compétition pour laquelle cette personne a été membre du jury"@fr)
+AnnotationAssertion(rdfs:label cinema:estMembreDeJuryPour "est membre du jury pour"@fr)
+AnnotationAssertion(rdfs:label cinema:estMembreDeJuryPour "fait partie du jury qui délibère pour"@fr)
+AnnotationAssertion(rdfs:label cinema:estMembreDeJuryPour "is jury member for "@en)
+SubObjectPropertyOf(cinema:estMembreDeJuryPour owl:topObjectProperty)
+ObjectPropertyDomain(cinema:estMembreDeJuryPour cinema:Personne)
+ObjectPropertyRange(cinema:estMembreDeJuryPour cinema:Competition)
+
+# Object Property: cinema:estMixeurPour (est mixeur pour)
+
+AnnotationAssertion(rdfs:label cinema:estMixeurPour "est mixeur pour"@fr)
+AnnotationAssertion(rdfs:label cinema:estMixeurPour "is mixer for"@en)
+SubObjectPropertyOf(cinema:estMixeurPour cinema:estTechnicienPostProductionPour)
+SubObjectPropertyOf(cinema:estMixeurPour cinema:estTechnicienSonPour)
+
+# Object Property: cinema:estMonteurSonPour (is sound editor for )
+
+AnnotationAssertion(rdfs:label cinema:estMonteurSonPour "est monteur son pour"@fr)
+AnnotationAssertion(rdfs:label cinema:estMonteurSonPour "is sound editor for "@en)
+SubObjectPropertyOf(cinema:estMonteurSonPour cinema:estTechnicienPostProductionPour)
+SubObjectPropertyOf(cinema:estMonteurSonPour cinema:estTechnicienSonPour)
+
+# Object Property: cinema:estPerchmanPour (is boom operator for)
+
+AnnotationAssertion(rdfs:label cinema:estPerchmanPour "est assistant son pour"@fr)
+AnnotationAssertion(rdfs:label cinema:estPerchmanPour "est perchiste pour"@fr)
+AnnotationAssertion(rdfs:label cinema:estPerchmanPour "est perchman pour"@fr)
+AnnotationAssertion(rdfs:label cinema:estPerchmanPour "is boom operator for"@en)
+SubObjectPropertyOf(cinema:estPerchmanPour cinema:estTechnicienSonPour)
+
+# Object Property: cinema:estPhotographeDePlateauPour (is set photographer)
+
+AnnotationAssertion(rdfs:label cinema:estPhotographeDePlateauPour "est photographe de plateau pour"@fr)
+AnnotationAssertion(rdfs:label cinema:estPhotographeDePlateauPour "is set photographer"@en)
+SubObjectPropertyOf(cinema:estPhotographeDePlateauPour cinema:estTechnicienImagePour)
+
+# Object Property: cinema:estPresidentDeJuryPour (préside le jury de)
+
+AnnotationAssertion(rdfs:label cinema:estPresidentDeJuryPour "est président de jury pour"@fr)
+AnnotationAssertion(rdfs:label cinema:estPresidentDeJuryPour "is jury president for"@en)
+AnnotationAssertion(rdfs:label cinema:estPresidentDeJuryPour "préside le jury de"@fr)
+SubObjectPropertyOf(cinema:estPresidentDeJuryPour cinema:estMembreDeJuryPour)
+
+# Object Property: cinema:estRealisateurHomme (is a male film director)
+
+AnnotationAssertion(rdfs:label cinema:estRealisateurHomme "est réalisateur"@fr)
+AnnotationAssertion(rdfs:label cinema:estRealisateurHomme "is a male film director"@en)
+SubObjectPropertyOf(cinema:estRealisateurHomme cinema:aRealise)
+ObjectPropertyDomain(cinema:estRealisateurHomme cinema:Homme)
+
+# Object Property: cinema:estRealisatrice (est realisatrice)
+
+AnnotationAssertion(rdfs:comment cinema:estRealisatrice "il est possible de vouloir distinguer les réalisateurs en fonction de leur sexe"@fr)
+AnnotationAssertion(rdfs:label cinema:estRealisatrice "est realisatrice"@fr)
+AnnotationAssertion(rdfs:label cinema:estRealisatrice "is a female film director"@en)
+SubObjectPropertyOf(cinema:estRealisatrice cinema:aRealise)
+ObjectPropertyDomain(cinema:estRealisatrice cinema:Femme)
+
+# Object Property: cinema:estRecompenseA (est primé à)
+
+AnnotationAssertion(rdfs:comment cinema:estRecompenseA "relation entre une personne et un compétition à laquelle cette personne a reçu un prix"@fr)
+AnnotationAssertion(rdfs:label cinema:estRecompenseA "est primé à"@fr)
+AnnotationAssertion(rdfs:label cinema:estRecompenseA "est récompense à"@fr)
+AnnotationAssertion(rdfs:label cinema:estRecompenseA "is awarded in"@en)
+ObjectPropertyDomain(cinema:estRecompenseA cinema:Personne)
+ObjectPropertyRange(cinema:estRecompenseA cinema:Competition)
+
+# Object Property: cinema:estRecompensePour (est récompensé pour le film)
+
+AnnotationAssertion(rdfs:label cinema:estRecompensePour "est récompensé pour le film"@fr)
+AnnotationAssertion(rdfs:label cinema:estRecompensePour "is awarded for"@en)
+ObjectPropertyDomain(cinema:estRecompensePour cinema:Personne)
+ObjectPropertyRange(cinema:estRecompensePour cinema:Film)
+
+# Object Property: cinema:estRegisseurPour (is manager for)
+
+AnnotationAssertion(rdfs:label cinema:estRegisseurPour "est régisseur pour"@fr)
+AnnotationAssertion(rdfs:label cinema:estRegisseurPour "is manager for"@en)
+SubObjectPropertyOf(cinema:estRegisseurPour cinema:estTechnicienPour)
+
+# Object Property: cinema:estSitueDans (est situé à/en/dans)
+
+AnnotationAssertion(rdfs:comment cinema:estSitueDans "permet de dire qu'un lieu est situé dans un autre lieu"@fr)
+AnnotationAssertion(rdfs:label cinema:estSitueDans "est situé à/en/dans"@fr)
+AnnotationAssertion(rdfs:label cinema:estSitueDans "is located in"@en)
+AnnotationAssertion(rdfs:label cinema:estSitueDans "se situe à/en/dans"@fr)
+SubObjectPropertyOf(cinema:estSitueDans cinema:aPourLieu)
+TransitiveObjectProperty(cinema:estSitueDans)
+ObjectPropertyDomain(cinema:estSitueDans cinema:Lieu)
+
+# Object Property: cinema:estTechnicienDecorPour (est technicien décor pour)
+
+AnnotationAssertion(rdfs:label cinema:estTechnicienDecorPour "est technicien décor pour"@en)
+AnnotationAssertion(rdfs:label cinema:estTechnicienDecorPour "is scenography technician for"@en)
+SubObjectPropertyOf(cinema:estTechnicienDecorPour cinema:estTechnicienPour)
+
+# Object Property: cinema:estTechnicienHMCPour (est technicien habillage maquillage coiffure pour)
+
+AnnotationAssertion(rdfs:label cinema:estTechnicienHMCPour "est technicien HMC pour"@fr)
+AnnotationAssertion(rdfs:label cinema:estTechnicienHMCPour "est technicien habillage maquillage coiffure pour"@fr)
+AnnotationAssertion(rdfs:label cinema:estTechnicienHMCPour "is make-up dressing hairstyle technician for"@en)
+SubObjectPropertyOf(cinema:estTechnicienHMCPour cinema:estTechnicienPour)
+
+# Object Property: cinema:estTechnicienImagePour (is image technician for)
+
+AnnotationAssertion(rdfs:label cinema:estTechnicienImagePour "est technicien de l'image pour"@fr)
+AnnotationAssertion(rdfs:label cinema:estTechnicienImagePour "est technicien image pour"@fr)
+AnnotationAssertion(rdfs:label cinema:estTechnicienImagePour "is image technician for"@en)
+SubObjectPropertyOf(cinema:estTechnicienImagePour cinema:estTechnicienPour)
+
+# Object Property: cinema:estTechnicienPostProductionPour (est technicien post production pour)
+
+AnnotationAssertion(rdfs:label cinema:estTechnicienPostProductionPour "est technicien post production pour"@fr)
+AnnotationAssertion(rdfs:label cinema:estTechnicienPostProductionPour "is post production technician"@en)
+SubObjectPropertyOf(cinema:estTechnicienPostProductionPour cinema:estTechnicienPour)
+
+# Object Property: cinema:estTechnicienPour (est technicien pour)
+
+AnnotationAssertion(rdfs:label cinema:estTechnicienPour "est technicien pour"@fr)
+AnnotationAssertion(rdfs:label cinema:estTechnicienPour "is technician in"@en)
+SubObjectPropertyOf(cinema:estTechnicienPour cinema:contribueAOeuvre)
+
+# Object Property: cinema:estTechnicienSonPour (is sound technician for )
+
+AnnotationAssertion(rdfs:label cinema:estTechnicienSonPour "est technicien son pour"@fr)
+AnnotationAssertion(rdfs:label cinema:estTechnicienSonPour "is sound technician for "@en)
+SubObjectPropertyOf(cinema:estTechnicienSonPour cinema:estTechnicienPour)
+
+# Object Property: cinema:estUneAdaptationDe (is une adaptatin of)
+
+AnnotationAssertion(rdfs:label cinema:estUneAdaptationDe "est une adaptation de"@fr)
+AnnotationAssertion(rdfs:label cinema:estUneAdaptationDe "is une adaptatin of"@en)
+ObjectPropertyDomain(cinema:estUneAdaptationDe cinema:Oeuvre)
+ObjectPropertyRange(cinema:estUneAdaptationDe cinema:Oeuvre)
+
+# Object Property: cinema:estUneLocalisationDe (est une version de)
+
+AnnotationAssertion(rdfs:comment cinema:estUneLocalisationDe "a pour oeuvre originale"@fr)
+AnnotationAssertion(rdfs:comment cinema:estUneLocalisationDe "relation entre une oeuvre localisée et l'oeuvre originale dont elle est la localisation"@fr)
+AnnotationAssertion(rdfs:label cinema:estUneLocalisationDe "est une localisation de"@fr)
+AnnotationAssertion(rdfs:label cinema:estUneLocalisationDe "est une version de"@fr)
+AnnotationAssertion(rdfs:label cinema:estUneLocalisationDe "is a version of "@en)
+ObjectPropertyDomain(cinema:estUneLocalisationDe cinema:OeuvreLocalisee)
+ObjectPropertyRange(cinema:estUneLocalisationDe cinema:OeuvreOriginale)
+
+# Object Property: cinema:filmAPourDoubleur (a pour doubleur)
+
+AnnotationAssertion(rdfs:label cinema:filmAPourDoubleur "a pour doubleur"@fr)
+AnnotationAssertion(rdfs:label cinema:filmAPourDoubleur "has as doubler"@en)
+SubObjectPropertyOf(cinema:filmAPourDoubleur cinema:aPourContributeurArtistique)
+
+# Object Property: cinema:filmAPourDoublure (film has as double )
+
+AnnotationAssertion(rdfs:label cinema:filmAPourDoublure "a pour doublure"@fr)
+AnnotationAssertion(rdfs:label cinema:filmAPourDoublure "film has as double "@en)
+SubObjectPropertyOf(cinema:filmAPourDoublure cinema:aPourContributeurArtistique)
+
+# Object Property: cinema:filmConcourePour (concoure pour)
+
+AnnotationAssertion(rdfs:label cinema:filmConcourePour "concoure pour"@fr)
+AnnotationAssertion(rdfs:label cinema:filmConcourePour "est nominé pour"@fr)
+AnnotationAssertion(rdfs:label cinema:filmConcourePour "film competes for"@en)
+SubObjectPropertyOf(cinema:filmConcourePour cinema:concourtPourPrix)
+ObjectPropertyDomain(cinema:filmConcourePour cinema:Film)
+
+# Object Property: cinema:incarne (joue le rôle de)
+
+AnnotationAssertion(rdfs:comment cinema:incarne "relation entre un etre vivant et un role incarné par cet être vivant"@fr)
+AnnotationAssertion(rdfs:label cinema:incarne "incarne"@fr)
+AnnotationAssertion(rdfs:label cinema:incarne "incarne le rôle de"@fr)
+AnnotationAssertion(rdfs:label cinema:incarne "joue"@fr)
+AnnotationAssertion(rdfs:label cinema:incarne "joue le rôle de"@fr)
+AnnotationAssertion(rdfs:label cinema:incarne "plays the role"@en)
+AnnotationAssertion(rdfs:label cinema:incarne "plays the role of"@en)
+ObjectPropertyDomain(cinema:incarne cinema:Personne)
+ObjectPropertyRange(cinema:incarne cinema:Role)
+
+# Object Property: cinema:personneConcourePour (est nominé pour)
+
+AnnotationAssertion(rdfs:label cinema:personneConcourePour "concoure pour"@fr)
+AnnotationAssertion(rdfs:label cinema:personneConcourePour "est nominé pour"@fr)
+AnnotationAssertion(rdfs:label cinema:personneConcourePour "person competes for"@en)
+SubObjectPropertyOf(cinema:personneConcourePour cinema:concourtPourPrix)
+ObjectPropertyDomain(cinema:personneConcourePour cinema:Personne)
+
+# Object Property: cinema:recompense (rewards)
+
+AnnotationAssertion(rdfs:label cinema:recompense "est dans le palmarès de"@fr)
+AnnotationAssertion(rdfs:label cinema:recompense "rewards"@en)
+AnnotationAssertion(rdfs:label cinema:recompense "récompense"@fr)
+
+# Object Property: cinema:recompenseFilm (rewards film)
+
+AnnotationAssertion(rdfs:label cinema:recompenseFilm "rewards film"@en)
+AnnotationAssertion(rdfs:label cinema:recompenseFilm "récompense"@fr)
+SubObjectPropertyOf(cinema:recompenseFilm cinema:recompense)
+FunctionalObjectProperty(cinema:recompenseFilm)
+
+# Object Property: cinema:recompensePersonne (rewards person)
+
+AnnotationAssertion(rdfs:label cinema:recompensePersonne "personne récompensée"@fr)
+AnnotationAssertion(rdfs:label cinema:recompensePersonne "personnes récompensées"@fr)
+AnnotationAssertion(rdfs:label cinema:recompensePersonne "rewards person"@en)
+AnnotationAssertion(rdfs:label cinema:recompensePersonne "récompense personne"@fr)
+SubObjectPropertyOf(cinema:recompensePersonne cinema:recompense)
+
+# Object Property: cinema:roleAPourCascadeur (role a pour cascadeur)
+
+AnnotationAssertion(rdfs:label cinema:roleAPourCascadeur "role a pour cascadeur"@fr)
+AnnotationAssertion(rdfs:label cinema:roleAPourCascadeur "role has as stunt perfomer"@en)
+AnnotationAssertion(rdfs:label cinema:roleAPourCascadeur "role has as stuntman "@en)
+SubObjectPropertyOf(cinema:roleAPourCascadeur cinema:roleAPourDoublure)
+
+# Object Property: cinema:roleAPourDoublure (role a pour doublure)
+
+AnnotationAssertion(rdfs:label cinema:roleAPourDoublure "est assuré par la doublure"@fr)
+AnnotationAssertion(rdfs:label cinema:roleAPourDoublure "role a pour doublure"@fr)
+ObjectPropertyDomain(cinema:roleAPourDoublure cinema:Role)
+ObjectPropertyRange(cinema:roleAPourDoublure cinema:Personne)
+
+# Object Property: cinema:roleDoublePar (is doubled by )
+
+AnnotationAssertion(rdfs:comment cinema:roleDoublePar "relie un rôle au doubleur qui l'a doublé (dans une version localisée)"@fr)
+AnnotationAssertion(rdfs:label cinema:roleDoublePar "est doublé par"@fr)
+AnnotationAssertion(rdfs:label cinema:roleDoublePar "is doubled by "@en)
+AnnotationAssertion(rdfs:label cinema:roleDoublePar "role doublé par "@fr)
+ObjectPropertyDomain(cinema:roleDoublePar cinema:Role)
+ObjectPropertyRange(cinema:roleDoublePar cinema:Personne)
+
+# Object Property: cinema:seDerouleDans (takes place in)
+
+AnnotationAssertion(rdfs:comment cinema:seDerouleDans "permet d'indiquer le lieu dans lequel se déroule un évènement (competition, film)"@fr)
+AnnotationAssertion(rdfs:label cinema:seDerouleDans "se déroule à/en/dans"@fr)
+AnnotationAssertion(rdfs:label cinema:seDerouleDans "takes place in"@en)
+SubObjectPropertyOf(cinema:seDerouleDans cinema:aPourLieu)
+ObjectPropertyDomain(cinema:seDerouleDans cinema:Evenement)
+
+
+############################
+#   Data Properties
+############################
+
+# Data Property: terms:title (title)
+
+AnnotationAssertion(rdfs:label terms:title "title"@en)
+AnnotationAssertion(rdfs:label terms:title "titre"@fr)
+EquivalentDataProperties(terms:title cinema:aPourTitre)
+
+# Data Property: cinema:aPourDate (a pour date)
+
+AnnotationAssertion(rdfs:label cinema:aPourDate "a pour date"@fr)
+AnnotationAssertion(rdfs:label cinema:aPourDate "has as date"@en)
+
+# Data Property: cinema:aPourDateDebut (starting date)
+
+AnnotationAssertion(rdfs:comment cinema:aPourDateDebut "correspond à la date de début d'un évènement"@fr)
+AnnotationAssertion(rdfs:label cinema:aPourDateDebut "a pour date début"@fr)
+AnnotationAssertion(rdfs:label cinema:aPourDateDebut "has as starting date"@en)
+AnnotationAssertion(rdfs:label cinema:aPourDateDebut "starting date"@en)
+SubDataPropertyOf(cinema:aPourDateDebut cinema:aPourDate)
+DataPropertyDomain(cinema:aPourDateDebut cinema:Evenement)
+
+# Data Property: cinema:aPourDateFin (ending date)
+
+AnnotationAssertion(rdfs:comment cinema:aPourDateFin "correspond à la date de fin d'un évènement"@fr)
+AnnotationAssertion(rdfs:label cinema:aPourDateFin "a pour date fin"@fr)
+AnnotationAssertion(rdfs:label cinema:aPourDateFin "ending date"@en)
+AnnotationAssertion(rdfs:label cinema:aPourDateFin "has as ending date"@en)
+SubDataPropertyOf(cinema:aPourDateFin cinema:aPourDate)
+DataPropertyDomain(cinema:aPourDateFin cinema:Evenement)
+
+# Data Property: cinema:aPourDateMort (has as date of death)
+
+AnnotationAssertion(rdfs:comment cinema:aPourDateMort "concerne un individu")
+AnnotationAssertion(rdfs:label cinema:aPourDateMort "a pour date de mort"@fr)
+AnnotationAssertion(rdfs:label cinema:aPourDateMort "date of death"@en)
+AnnotationAssertion(rdfs:label cinema:aPourDateMort "has as date of death"@en)
+SubDataPropertyOf(cinema:aPourDateMort cinema:aPourDate)
+FunctionalDataProperty(cinema:aPourDateMort)
+DataPropertyDomain(cinema:aPourDateMort cinema:Personne)
+
+# Data Property: cinema:aPourDateNaissance (date of birth)
+
+AnnotationAssertion(rdfs:label cinema:aPourDateNaissance "a pour date de naissance"@fr)
+AnnotationAssertion(rdfs:label cinema:aPourDateNaissance "date of birth"@en)
+AnnotationAssertion(rdfs:label cinema:aPourDateNaissance "has as date of birth"@en)
+SubDataPropertyOf(cinema:aPourDateNaissance cinema:aPourDate)
+FunctionalDataProperty(cinema:aPourDateNaissance)
+
+# Data Property: cinema:aPourDateSortie (a pour date sortie)
+
+AnnotationAssertion(rdfs:comment cinema:aPourDateSortie "concerne les oeuvre comme par exemple les films + dvd"@fr)
+AnnotationAssertion(rdfs:label cinema:aPourDateSortie "a pour date de sortie"@fr)
+AnnotationAssertion(rdfs:label cinema:aPourDateSortie "a pour date sortie"@fr)
+AnnotationAssertion(rdfs:label cinema:aPourDateSortie "release date
+
+"@en)
+SubDataPropertyOf(cinema:aPourDateSortie cinema:aPourDate)
+DataPropertyDomain(cinema:aPourDateSortie cinema:Oeuvre)
+
+# Data Property: cinema:aPourDureeMinutes (has as duration)
+
+AnnotationAssertion(rdfs:comment cinema:aPourDureeMinutes "rajouter car OWL ne gère pas le type xsd:duration et il est important de définir correctement la classe court-métrage"@fr)
+AnnotationAssertion(rdfs:label cinema:aPourDureeMinutes "a pour durée"@fr)
+AnnotationAssertion(rdfs:label cinema:aPourDureeMinutes "has as duration"@en)
+DataPropertyRange(cinema:aPourDureeMinutes xsd:int)
+
+# Data Property: cinema:aPourNom (a pour nom)
+
+AnnotationAssertion(rdfs:label cinema:aPourNom "a pour nom"@fr)
+AnnotationAssertion(rdfs:label cinema:aPourNom "has as last name"@en)
+EquivalentDataProperties(cinema:aPourNom foaf:familyName)
+EquivalentDataProperties(cinema:aPourNom foaf:family_name)
+EquivalentDataProperties(cinema:aPourNom foaf:lastName)
+
+# Data Property: cinema:aPourNombreDeMembreDeJury (has number of jury members)
+
+AnnotationAssertion(rdfs:label cinema:aPourNombreDeMembreDeJury "a pour nombre de membre de jury"@fr)
+AnnotationAssertion(rdfs:label cinema:aPourNombreDeMembreDeJury "has number of jury members"@en)
+DataPropertyRange(cinema:aPourNombreDeMembreDeJury xsd:int)
+
+# Data Property: cinema:aPourPrenom (has as first name)
+
+AnnotationAssertion(rdfs:label cinema:aPourPrenom "a pour prenom"@fr)
+AnnotationAssertion(rdfs:label cinema:aPourPrenom "first name"@en)
+AnnotationAssertion(rdfs:label cinema:aPourPrenom "has as first name"@en)
+AnnotationAssertion(rdfs:label cinema:aPourPrenom "prénom"@fr)
+EquivalentDataProperties(cinema:aPourPrenom foaf:firstName)
+EquivalentDataProperties(cinema:aPourPrenom foaf:givenName)
+EquivalentDataProperties(cinema:aPourPrenom foaf:givenname)
+
+# Data Property: cinema:aPourTitre (titre)
+
+AnnotationAssertion(rdfs:label cinema:aPourTitre "a pour titre"@fr)
+AnnotationAssertion(rdfs:label cinema:aPourTitre "title"@en)
+AnnotationAssertion(rdfs:label cinema:aPourTitre "titre"@fr)
+
+# Data Property: foaf:familyName (family name)
+
+AnnotationAssertion(rdfs:label foaf:familyName "family name"@en)
+
+# Data Property: foaf:family_name (family name)
+
+AnnotationAssertion(rdfs:label foaf:family_name "family name"@en)
+
+# Data Property: foaf:firstName (first name)
+
+AnnotationAssertion(rdfs:label foaf:firstName "first name"@en)
+AnnotationAssertion(rdfs:label foaf:firstName "prénom"@fr)
+
+# Data Property: foaf:givenName (prénom)
+
+AnnotationAssertion(rdfs:label foaf:givenName "given name"@en)
+AnnotationAssertion(rdfs:label foaf:givenName "prénom"@fr)
+
+# Data Property: foaf:givenname (given name)
+
+AnnotationAssertion(rdfs:label foaf:givenname "given name"@en)
+AnnotationAssertion(rdfs:label foaf:givenname "prénom"@fr)
+
+# Data Property: foaf:lastName (last name)
+
+AnnotationAssertion(rdfs:label foaf:lastName "a pour nom"@fr)
+AnnotationAssertion(rdfs:label foaf:lastName "has as last name"@en)
+AnnotationAssertion(rdfs:label foaf:lastName "last name"@en)
+
+
+
+############################
+#   Classes
+############################
+
+# Class: event:Event (event:Event)
+
+EquivalentClasses(event:Event cinema:Evenement)
+
+# Class: cinema:AireGeographique (geographical area)
+
+AnnotationAssertion(rdfs:comment cinema:AireGeographique "aire géographique"@fr)
+AnnotationAssertion(rdfs:label cinema:AireGeographique "geographical area"@en)
+AnnotationAssertion(rdfs:label cinema:AireGeographique "zone géographique"@fr)
+SubClassOf(cinema:AireGeographique cinema:Lieu)
+
+# Class: cinema:Artiste (artist)
+
+AnnotationAssertion(rdfs:comment cinema:Artiste "une personne est artiste même si elle n'a pas contribué à une oeuvre (le terme artiste désigne directement la classe) voir http://fr.wikipedia.org/wiki/Artiste"@fr)
+AnnotationAssertion(rdfs:label cinema:Artiste "artist"@en)
+AnnotationAssertion(rdfs:label cinema:Artiste "artiste"@fr)
+SubClassOf(cinema:Artiste cinema:Personne)
+
+# Class: cinema:CameraOr (Golden camera )
+
+AnnotationAssertion(rdfs:label cinema:CameraOr "Caméra d'or"@fr)
+AnnotationAssertion(rdfs:label cinema:CameraOr "Golden camera "@en)
+SubClassOf(cinema:CameraOr cinema:PrixSpecifiqueFestivaleDeCannes)
+
+# Class: cinema:Ceremonie (ceremony)
+
+AnnotationAssertion(rdfs:comment cinema:Ceremonie "est une compétition qui dure moins d'un jour (non exprimable en owl 2)"@fr)
+AnnotationAssertion(rdfs:label cinema:Ceremonie "ceremony"@en)
+AnnotationAssertion(rdfs:label cinema:Ceremonie "cérémonie"@fr)
+SubClassOf(cinema:Ceremonie cinema:Competition)
+DisjointClasses(cinema:Ceremonie cinema:CompetitionMedia)
+
+# Class: cinema:CesarDuCinema (césars du cinéma)
+
+AnnotationAssertion(rdfs:label cinema:CesarDuCinema "cesars of french cinema"@en)
+AnnotationAssertion(rdfs:label cinema:CesarDuCinema "césars du cinéma"@fr)
+AnnotationAssertion(rdfs:label cinema:CesarDuCinema "césars du cinéma français"@fr)
+EquivalentClasses(cinema:CesarDuCinema ObjectSomeValuesFrom(cinema:decerne cinema:PrixCesarDesCesars))
+SubClassOf(cinema:CesarDuCinema cinema:Ceremonie)
+
+# Class: cinema:Cinefondation (Cinéfondation)
+
+AnnotationAssertion(rdfs:label cinema:Cinefondation "Cinéfondation"@fr)
+SubClassOf(cinema:Cinefondation cinema:PrixSpecifiqueFestivaleDeCannes)
+
+# Class: cinema:Competition (competition)
+
+AnnotationAssertion(rdfs:label cinema:Competition "competition"@en)
+AnnotationAssertion(rdfs:label cinema:Competition "compétition"@fr)
+EquivalentClasses(cinema:Competition ObjectSomeValuesFrom(cinema:decerne cinema:PrixDecerne))
+SubClassOf(cinema:Competition cinema:Evenement)
+
+# Class: cinema:CompetitionMedia (prix média)
+
+AnnotationAssertion(rdfs:label cinema:CompetitionMedia "media prizes"@en)
+AnnotationAssertion(rdfs:label cinema:CompetitionMedia "prix média"@fr)
+SubClassOf(cinema:CompetitionMedia cinema:Competition)
+DisjointClasses(cinema:CompetitionMedia cinema:FestivalDeCinema)
+
+# Class: cinema:Continent (continent)
+
+AnnotationAssertion(rdfs:label cinema:Continent "continent"@fr)
+SubClassOf(cinema:Continent cinema:LieuAdministratif)
+
+# Class: cinema:CourantCinematographique (courant cinématographique)
+
+AnnotationAssertion(rdfs:comment cinema:CourantCinematographique "instances tirées des sources suivantes:
+http://fr.wikipedia.org/wiki/Cin%C3%A9ma#Mouvements_et_.C3.A9coles
+http://fr.wikipedia.org/wiki/Courant_cin%C3%A9matographique
+http://fr.wikipedia.org/wiki/Cat%C3%A9gorie:Courant_cin%C3%A9matographique"@fr)
+AnnotationAssertion(rdfs:comment cinema:CourantCinematographique "manière de ressentir l’œuvre"@fr)
+AnnotationAssertion(rdfs:label cinema:CourantCinematographique "cinematographic school"@en)
+AnnotationAssertion(rdfs:label cinema:CourantCinematographique "courant cinématographique"@fr)
+AnnotationAssertion(rdfs:label cinema:CourantCinematographique "film movement"@en)
+AnnotationAssertion(rdfs:label cinema:CourantCinematographique "film school"@en)
+AnnotationAssertion(rdfs:label cinema:CourantCinematographique "mouvement cinématographique"@fr)
+AnnotationAssertion(rdfs:label cinema:CourantCinematographique "école cinématographique"@fr)
+
+# Class: cinema:CourtMetrage (short film)
+
+AnnotationAssertion(rdfs:comment cinema:CourtMetrage "film qui dure 59 minutes ou moins, comme expliqué ici: http://fr.wikipedia.org/wiki/Court_m%C3%A9trage#La_d.C3.A9finition_d.27un_court_m.C3.A9trage"@fr)
+AnnotationAssertion(rdfs:label cinema:CourtMetrage "court métrage"@fr)
+AnnotationAssertion(rdfs:label cinema:CourtMetrage "court-métrage"@fr)
+AnnotationAssertion(rdfs:label cinema:CourtMetrage "short film"@en)
+EquivalentClasses(cinema:CourtMetrage ObjectIntersectionOf(cinema:Film DataSomeValuesFrom(cinema:aPourDureeMinutes DatatypeRestriction(xsd:int xsd:maxInclusive "59"^^xsd:integer))))
+DisjointClasses(cinema:CourtMetrage cinema:LongMetrage)
+
+# Class: cinema:DessinAnime (cartoon)
+
+AnnotationAssertion(rdfs:comment cinema:DessinAnime "film qui utilise la technique du dessin animé"@fr)
+AnnotationAssertion(rdfs:label cinema:DessinAnime "cartoon"@en)
+AnnotationAssertion(rdfs:label cinema:DessinAnime "dessin animé"@fr)
+EquivalentClasses(cinema:DessinAnime ObjectIntersectionOf(cinema:Film ObjectSomeValuesFrom(cinema:aPourTechnique cinema:TechniqueDuDessinAnime)))
+
+# Class: cinema:DeuxiemePrixCinefondation (deuxième prix Cinéfondation)
+
+AnnotationAssertion(rdfs:label cinema:DeuxiemePrixCinefondation "deuxième prix Cinéfondation"@fr)
+AnnotationAssertion(rdfs:label cinema:DeuxiemePrixCinefondation "second cinéfondation prize"@en)
+SubClassOf(cinema:DeuxiemePrixCinefondation cinema:Cinefondation)
+
+# Class: cinema:Evenement (évènement)
+
+AnnotationAssertion(rdfs:label cinema:Evenement "event"@en)
+AnnotationAssertion(rdfs:label cinema:Evenement "évènement"@fr)
+AnnotationAssertion(rdfs:label cinema:Evenement "événement"@fr)
+SubClassOf(cinema:Evenement owl:Thing)
+
+# Class: cinema:Femme (female)
+
+AnnotationAssertion(rdfs:label cinema:Femme "female"@en)
+AnnotationAssertion(rdfs:label cinema:Femme "femme"@fr)
+EquivalentClasses(cinema:Femme ObjectIntersectionOf(cinema:Personne ObjectHasValue(cinema:aPourSexe cinema:Feminin)))
+SubClassOf(cinema:Femme cinema:Personne)
+
+# Class: cinema:FestivalDeCannes (Cannes festival)
+
+AnnotationAssertion(rdfs:label cinema:FestivalDeCannes "Cannes festival"@en)
+AnnotationAssertion(rdfs:label cinema:FestivalDeCannes "festival de Cannes"@fr)
+EquivalentClasses(cinema:FestivalDeCannes ObjectSomeValuesFrom(cinema:decerne ObjectUnionOf(cinema:CameraOr cinema:Cinefondation cinema:UnCertainRegard)))
+SubClassOf(cinema:FestivalDeCannes cinema:FestivalDeCinema)
+SubClassOf(cinema:FestivalDeCannes ObjectHasValue(cinema:seDerouleDans cinema:Cannes))
+
+# Class: cinema:FestivalDeCinema (festival)
+
+AnnotationAssertion(rdfs:comment cinema:FestivalDeCinema "un festival est une compétition qui dure au moins un jour (non exprimable en OWL2)"@fr)
+AnnotationAssertion(rdfs:label cinema:FestivalDeCinema "cinema festival"@en)
+AnnotationAssertion(rdfs:label cinema:FestivalDeCinema "festival"@fr)
+AnnotationAssertion(rdfs:label cinema:FestivalDeCinema "festival de cinéma"@fr)
+AnnotationAssertion(rdfs:label cinema:FestivalDeCinema "film festival"@en)
+SubClassOf(cinema:FestivalDeCinema cinema:Competition)
+
+# Class: cinema:FestivalDeClermontFerrand (Clermont-Ferrand festival)
+
+AnnotationAssertion(rdfs:label cinema:FestivalDeClermontFerrand "Clermont-Ferrand festival"@en)
+AnnotationAssertion(rdfs:label cinema:FestivalDeClermontFerrand "festival de Clermont-Ferrand"@fr)
+SubClassOf(cinema:FestivalDeClermontFerrand cinema:FestivalDeCinema)
+SubClassOf(cinema:FestivalDeClermontFerrand ObjectHasValue(cinema:seDerouleDans cinema:ClermontFerrand))
+
+# Class: cinema:FestivalDeDeauville (festival de Deauville)
+
+AnnotationAssertion(rdfs:label cinema:FestivalDeDeauville "Deauville festival"@en)
+AnnotationAssertion(rdfs:label cinema:FestivalDeDeauville "festival de Deauville"@fr)
+EquivalentClasses(cinema:FestivalDeDeauville ObjectSomeValuesFrom(cinema:decerne ObjectUnionOf(cinema:PrixMichelOrnano cinema:PrixRevelationCartier)))
+SubClassOf(cinema:FestivalDeDeauville cinema:FestivalDeCinema)
+SubClassOf(cinema:FestivalDeDeauville ObjectHasValue(cinema:seDerouleDans cinema:Deauville))
+
+# Class: cinema:FestivalDuReel (Reel festival)
+
+AnnotationAssertion(rdfs:label cinema:FestivalDuReel "Reel festival"@en)
+AnnotationAssertion(rdfs:label cinema:FestivalDuReel "festival du Reel"@fr)
+SubClassOf(cinema:FestivalDuReel cinema:FestivalDeCinema)
+
+# Class: cinema:Film (movie)
+
+AnnotationAssertion(rdfs:comment cinema:Film "attention un film n'a pas forcement d acteur (les films documentaires)"@fr)
+AnnotationAssertion(rdfs:label cinema:Film "film"@fr)
+AnnotationAssertion(rdfs:label cinema:Film "movie"@en)
+SubClassOf(cinema:Film ObjectMinCardinality(1 cinema:aPourProducteur cinema:Personne))
+SubClassOf(cinema:Film ObjectMinCardinality(1 cinema:aPourRealisateur cinema:Personne))
+
+# Class: cinema:Film3D (3D film)
+
+AnnotationAssertion(rdfs:label cinema:Film3D "3D film"@en)
+AnnotationAssertion(rdfs:label cinema:Film3D "film en 3D"@fr)
+EquivalentClasses(cinema:Film3D ObjectIntersectionOf(cinema:Film ObjectSomeValuesFrom(cinema:aPourTechnique cinema:TechniqueDAnimation3D)))
+
+# Class: cinema:FilmEnNoirEtBlanc (film en noir et blanc)
+
+AnnotationAssertion(rdfs:label cinema:FilmEnNoirEtBlanc "black and white film"@en)
+AnnotationAssertion(rdfs:label cinema:FilmEnNoirEtBlanc "black-and-white film"@en)
+AnnotationAssertion(rdfs:label cinema:FilmEnNoirEtBlanc "film en noir et blanc"@fr)
+EquivalentClasses(cinema:FilmEnNoirEtBlanc ObjectIntersectionOf(cinema:Film ObjectSomeValuesFrom(cinema:aPourTechniqueDePriseDeVues cinema:PriseDeVueEnNoirEtBlanc)))
+
+# Class: cinema:FilmEtranger (cinema:FilmEtranger)
+
+EquivalentClasses(cinema:FilmEtranger ObjectIntersectionOf(cinema:Film ObjectComplementOf(ObjectHasValue(cinema:aPourPaysOrigine cinema:France))))
+SubClassOf(cinema:FilmEtranger cinema:Film)
+
+# Class: cinema:FilmFrancais (cinema:FilmFrancais)
+
+EquivalentClasses(cinema:FilmFrancais ObjectIntersectionOf(cinema:Film ObjectHasValue(cinema:aPourPaysOrigine cinema:France)))
+SubClassOf(cinema:FilmFrancais cinema:Film)
+
+# Class: cinema:FilmLocalise (version de film)
+
+AnnotationAssertion(rdfs:comment cinema:FilmLocalise "version d'un film qui a été adaptée pour être distribuée dans une région différente de la région d'origine"@fr)
+AnnotationAssertion(rdfs:label cinema:FilmLocalise "film localisé"@fr)
+AnnotationAssertion(rdfs:label cinema:FilmLocalise "film version"@en)
+AnnotationAssertion(rdfs:label cinema:FilmLocalise "localised film"@en)
+AnnotationAssertion(rdfs:label cinema:FilmLocalise "version de film"@fr)
+EquivalentClasses(cinema:FilmLocalise ObjectIntersectionOf(cinema:Film cinema:OeuvreLocalisee))
+DisjointClasses(cinema:FilmLocalise cinema:FilmOriginal)
+
+# Class: cinema:FilmOriginal (original film)
+
+AnnotationAssertion(rdfs:label cinema:FilmOriginal "film original"@fr)
+AnnotationAssertion(rdfs:label cinema:FilmOriginal "original film"@en)
+EquivalentClasses(cinema:FilmOriginal ObjectIntersectionOf(cinema:Film cinema:OeuvreOriginale))
+
+# Class: cinema:Genre (genre)
+
+AnnotationAssertion(rdfs:label cinema:Genre "genre"@fr)
+
+# Class: cinema:GenreCinematographique (genre cinematographique)
+
+AnnotationAssertion(rdfs:comment cinema:GenreCinematographique "instances prises ici:
+http://fr.wikipedia.org/wiki/Portail:Cin%C3%A9ma/Arborescence"@fr)
+AnnotationAssertion(rdfs:label cinema:GenreCinematographique "cinematographic genre"@en)
+AnnotationAssertion(rdfs:label cinema:GenreCinematographique "genre"@fr)
+AnnotationAssertion(rdfs:label cinema:GenreCinematographique "genre cinematographique"@fr)
+SubClassOf(cinema:GenreCinematographique cinema:Genre)
+
+# Class: cinema:GrandPrix (grand prix)
+
+AnnotationAssertion(rdfs:label cinema:GrandPrix "grand prix"@en)
+AnnotationAssertion(rdfs:label cinema:GrandPrix "grand prix"@fr)
+SubClassOf(cinema:GrandPrix cinema:PrixFilm)
+
+# Class: cinema:GrandPrixCinemaELLE (grand prize cinema ELLE)
+
+AnnotationAssertion(rdfs:label cinema:GrandPrixCinemaELLE "grand prix cinéma ELLE"@fr)
+AnnotationAssertion(rdfs:label cinema:GrandPrixCinemaELLE "grand prize cinema ELLE"@en)
+SubClassOf(cinema:GrandPrixCinemaELLE cinema:CompetitionMedia)
+
+# Class: cinema:Homme (homme)
+
+AnnotationAssertion(rdfs:label cinema:Homme "homme"@fr)
+AnnotationAssertion(rdfs:label cinema:Homme "male"@en)
+EquivalentClasses(cinema:Homme ObjectIntersectionOf(cinema:Personne ObjectHasValue(cinema:aPourSexe cinema:Masculin)))
+SubClassOf(cinema:Homme cinema:Personne)
+
+# Class: cinema:IntervenantArtistiqueDansOeuvre (cinema:IntervenantArtistiqueDansOeuvre)
+
+AnnotationAssertion(rdfs:comment cinema:IntervenantArtistiqueDansOeuvre "classe \"à anonymiser\" correspondant aux personnes ayant contribué artistiquement à une oeuvre"@fr)
+EquivalentClasses(cinema:IntervenantArtistiqueDansOeuvre ObjectSomeValuesFrom(cinema:contribueArtistiquementAOeuvre cinema:Oeuvre))
+SubClassOf(cinema:IntervenantArtistiqueDansOeuvre cinema:Artiste)
+
+# Class: cinema:Lieu (place)
+
+AnnotationAssertion(rdfs:label cinema:Lieu "lieu"@fr)
+AnnotationAssertion(rdfs:label cinema:Lieu "localisation"@fr)
+AnnotationAssertion(rdfs:label cinema:Lieu "place"@en)
+
+# Class: cinema:LieuAdministratif (lieu administratif)
+
+AnnotationAssertion(rdfs:label cinema:LieuAdministratif "administrative area"@en)
+AnnotationAssertion(rdfs:label cinema:LieuAdministratif "lieu administratif"@fr)
+SubClassOf(cinema:LieuAdministratif cinema:Lieu)
+
+# Class: cinema:LongMetrage (long-métrage)
+
+AnnotationAssertion(rdfs:comment cinema:LongMetrage "film qui dure plus de 59 minutes"@fr)
+AnnotationAssertion(rdfs:label cinema:LongMetrage "feature film"@en)
+AnnotationAssertion(rdfs:label cinema:LongMetrage "full-length feature film"@en)
+AnnotationAssertion(rdfs:label cinema:LongMetrage "full-length film"@en)
+AnnotationAssertion(rdfs:label cinema:LongMetrage "long-métrage"@fr)
+EquivalentClasses(cinema:LongMetrage ObjectIntersectionOf(cinema:Film DataSomeValuesFrom(cinema:aPourDureeMinutes DatatypeRestriction(xsd:int xsd:minExclusive "59"^^xsd:integer))))
+
+# Class: cinema:Oeuvre (work)
+
+AnnotationAssertion(rdfs:comment cinema:Oeuvre "est quelque chose à laquelle quelqu'un a contribué"@fr)
+AnnotationAssertion(rdfs:label cinema:Oeuvre "oeuvre"@fr)
+AnnotationAssertion(rdfs:label cinema:Oeuvre "work"@en)
+EquivalentClasses(cinema:Oeuvre ObjectSomeValuesFrom(cinema:aPourContributeur cinema:Personne))
+
+# Class: cinema:OeuvreArtistique (oeuvre artistique)
+
+AnnotationAssertion(rdfs:label cinema:OeuvreArtistique "artistic work"@en)
+AnnotationAssertion(rdfs:label cinema:OeuvreArtistique "oeuvre artistique"@fr)
+EquivalentClasses(cinema:OeuvreArtistique ObjectSomeValuesFrom(cinema:aPourContributeurArtistique cinema:Personne))
+
+# Class: cinema:OeuvreLocalisee (oeuvre localisée)
+
+AnnotationAssertion(rdfs:comment cinema:OeuvreLocalisee "oeuvre adaptée à la culture d'un lieu géographique (notamment la langue)"@fr)
+AnnotationAssertion(rdfs:label cinema:OeuvreLocalisee "localised work"@en)
+AnnotationAssertion(rdfs:label cinema:OeuvreLocalisee "oeuvre localisée"@fr)
+EquivalentClasses(cinema:OeuvreLocalisee ObjectIntersectionOf(cinema:Oeuvre ObjectSomeValuesFrom(cinema:estLocalisePour cinema:AireGeographique)))
+EquivalentClasses(cinema:OeuvreLocalisee ObjectIntersectionOf(cinema:Oeuvre ObjectSomeValuesFrom(cinema:estUneLocalisationDe cinema:Oeuvre)))
+DisjointClasses(cinema:OeuvreLocalisee cinema:OeuvreOriginale)
+
+# Class: cinema:OeuvreOriginale (oeuvre originale)
+
+AnnotationAssertion(rdfs:comment cinema:OeuvreOriginale "oeuvre telle qu'elle est conçue par son créateur")
+AnnotationAssertion(rdfs:label cinema:OeuvreOriginale "oeuvre originale"@fr)
+AnnotationAssertion(rdfs:label cinema:OeuvreOriginale "original work"@en)
+SubClassOf(cinema:OeuvreOriginale cinema:Oeuvre)
+
+# Class: cinema:Pays (country)
+
+AnnotationAssertion(rdfs:label cinema:Pays "country"@en)
+AnnotationAssertion(rdfs:label cinema:Pays "pays"@fr)
+SubClassOf(cinema:Pays cinema:LieuAdministratif)
+
+# Class: cinema:Personne (personnes)
+
+AnnotationAssertion(rdfs:label cinema:Personne "person"@en)
+AnnotationAssertion(rdfs:label cinema:Personne "personne"@fr)
+AnnotationAssertion(rdfs:label cinema:Personne "personnes"@fr)
+EquivalentClasses(cinema:Personne foaf:Person)
+
+# Class: cinema:PremierPrixCinefondation (first cinéfondation prize)
+
+AnnotationAssertion(rdfs:label cinema:PremierPrixCinefondation "first cinéfondation prize"@en)
+AnnotationAssertion(rdfs:label cinema:PremierPrixCinefondation "premier prix Cinéfondation"@fr)
+SubClassOf(cinema:PremierPrixCinefondation cinema:Cinefondation)
+
+# Class: cinema:PriseDeVueEnNoirEtBlanc (prise de vue en noir et blanc)
+
+AnnotationAssertion(rdfs:label cinema:PriseDeVueEnNoirEtBlanc "black and white shooting technique"@en)
+AnnotationAssertion(rdfs:label cinema:PriseDeVueEnNoirEtBlanc "prise de vue en noir et blanc"@fr)
+SubClassOf(cinema:PriseDeVueEnNoirEtBlanc cinema:TechniqueDePriseDeVue)
+
+# Class: cinema:PrixArtiste (prix pour un artiste)
+
+AnnotationAssertion(rdfs:label cinema:PrixArtiste "award for an artist"@en)
+AnnotationAssertion(rdfs:label cinema:PrixArtiste "prix pour un artiste"@fr)
+SubClassOf(cinema:PrixArtiste cinema:PrixDecerne)
+DisjointClasses(cinema:PrixArtiste cinema:PrixOeuvreCinematographique)
+
+# Class: cinema:PrixCesarDesCesars (César of Césars)
+
+AnnotationAssertion(rdfs:label cinema:PrixCesarDesCesars "César des Césars"@fr)
+AnnotationAssertion(rdfs:label cinema:PrixCesarDesCesars "César of Césars"@en)
+SubClassOf(cinema:PrixCesarDesCesars cinema:PrixSpecifiqueCeremonieCesar)
+
+# Class: cinema:PrixCritiqueInternationale (International critics award)
+
+AnnotationAssertion(rdfs:label cinema:PrixCritiqueInternationale "International critics award"@en)
+AnnotationAssertion(rdfs:label cinema:PrixCritiqueInternationale "prix de la critique internationale"@fr)
+SubClassOf(cinema:PrixCritiqueInternationale cinema:PrixFilm)
+
+# Class: cinema:PrixDecerne (prix)
+
+AnnotationAssertion(rdfs:label cinema:PrixDecerne "award"@en)
+AnnotationAssertion(rdfs:label cinema:PrixDecerne "prix"@fr)
+AnnotationAssertion(rdfs:label cinema:PrixDecerne "prix décerné"@fr)
+AnnotationAssertion(rdfs:label cinema:PrixDecerne "prizes awarded"@en)
+AnnotationAssertion(rdfs:label cinema:PrixDecerne "récompense"@fr)
+
+# Class: cinema:PrixDirection (prix de direction)
+
+AnnotationAssertion(rdfs:label cinema:PrixDirection "direction award"@en)
+AnnotationAssertion(rdfs:label cinema:PrixDirection "prix de direction"@fr)
+SubClassOf(cinema:PrixDirection cinema:PrixArtiste)
+
+# Class: cinema:PrixFilm (film award)
+
+AnnotationAssertion(rdfs:label cinema:PrixFilm "film award"@en)
+AnnotationAssertion(rdfs:label cinema:PrixFilm "prix film"@fr)
+SubClassOf(cinema:PrixFilm cinema:PrixOeuvreCinematographique)
+
+# Class: cinema:PrixFilmdAnimation (animation film award)
+
+AnnotationAssertion(rdfs:label cinema:PrixFilmdAnimation "animation film award"@en)
+AnnotationAssertion(rdfs:label cinema:PrixFilmdAnimation "prix du film d'animation"@fr)
+SubClassOf(cinema:PrixFilmdAnimation cinema:PrixFilm)
+
+# Class: cinema:PrixHonneur (award of honor )
+
+AnnotationAssertion(rdfs:label cinema:PrixHonneur "award of honor "@en)
+AnnotationAssertion(rdfs:label cinema:PrixHonneur "prix d'honneur"@fr)
+SubClassOf(cinema:PrixHonneur cinema:PrixFilm)
+
+# Class: cinema:PrixInterpretation (interpretation award)
+
+AnnotationAssertion(rdfs:label cinema:PrixInterpretation "interpretation award"@en)
+AnnotationAssertion(rdfs:label cinema:PrixInterpretation "prix d'interprétation"@fr)
+SubClassOf(cinema:PrixInterpretation cinema:PrixArtiste)
+
+# Class: cinema:PrixJury (prix du jury)
+
+AnnotationAssertion(rdfs:label cinema:PrixJury "jury award"@en)
+AnnotationAssertion(rdfs:label cinema:PrixJury "prix du jury"@fr)
+SubClassOf(cinema:PrixJury cinema:PrixFilm)
+
+# Class: cinema:PrixMeilleurActeur (best actor award)
+
+AnnotationAssertion(rdfs:label cinema:PrixMeilleurActeur "best actor award"@en)
+AnnotationAssertion(rdfs:label cinema:PrixMeilleurActeur "prix du meilleur acteur"@fr)
+SubClassOf(cinema:PrixMeilleurActeur cinema:PrixInterpretation)
+
+# Class: cinema:PrixMeilleurActeurSecondRole (best second male role award)
+
+AnnotationAssertion(rdfs:label cinema:PrixMeilleurActeurSecondRole "best second male role award"@en)
+AnnotationAssertion(rdfs:label cinema:PrixMeilleurActeurSecondRole "best supporting actor award"@en)
+AnnotationAssertion(rdfs:label cinema:PrixMeilleurActeurSecondRole "prix du meilleur second rôle masculin"@fr)
+SubClassOf(cinema:PrixMeilleurActeurSecondRole cinema:PrixInterpretation)
+
+# Class: cinema:PrixMeilleurDecor (prix du meilleur décor)
+
+AnnotationAssertion(rdfs:label cinema:PrixMeilleurDecor "best scenography award"@en)
+AnnotationAssertion(rdfs:label cinema:PrixMeilleurDecor "prix du meilleur décor"@fr)
+SubClassOf(cinema:PrixMeilleurDecor cinema:PrixMeilleursCostumesEtDecors)
+
+# Class: cinema:PrixMeilleurEspoirFeminin (prix du meilleur espoir féminin)
+
+AnnotationAssertion(rdfs:label cinema:PrixMeilleurEspoirFeminin "best female newcomer award"@en)
+AnnotationAssertion(rdfs:label cinema:PrixMeilleurEspoirFeminin "prix du meilleur espoir féminin"@fr)
+SubClassOf(cinema:PrixMeilleurEspoirFeminin cinema:PrixInterpretation)
+
+# Class: cinema:PrixMeilleurEspoirMasculin (prix du meilleur espoir masculin)
+
+AnnotationAssertion(rdfs:label cinema:PrixMeilleurEspoirMasculin "best male newcomer award"@en)
+AnnotationAssertion(rdfs:label cinema:PrixMeilleurEspoirMasculin "prix du meilleur espoir masculin"@fr)
+SubClassOf(cinema:PrixMeilleurEspoirMasculin cinema:PrixInterpretation)
+
+# Class: cinema:PrixMeilleurFilm (best film award)
+
+AnnotationAssertion(rdfs:label cinema:PrixMeilleurFilm "best film award"@en)
+AnnotationAssertion(rdfs:label cinema:PrixMeilleurFilm "prix du meilleur film"@fr)
+SubClassOf(cinema:PrixMeilleurFilm cinema:PrixFilm)
+
+# Class: cinema:PrixMeilleurMaquillage (best make-up award)
+
+AnnotationAssertion(rdfs:label cinema:PrixMeilleurMaquillage "best make-up award"@en)
+AnnotationAssertion(rdfs:label cinema:PrixMeilleurMaquillage "prix du meilleur maquillage"@fr)
+SubClassOf(cinema:PrixMeilleurMaquillage cinema:PrixMeilleursCostumesEtDecors)
+
+# Class: cinema:PrixMeilleurMixageSon (prix meilleur mixage de son)
+
+AnnotationAssertion(rdfs:label cinema:PrixMeilleurMixageSon "best sound mixing award"@en)
+AnnotationAssertion(rdfs:label cinema:PrixMeilleurMixageSon "prix meilleur mixage de son"@fr)
+SubClassOf(cinema:PrixMeilleurMixageSon cinema:PrixMeilleurSon)
+DisjointClasses(cinema:PrixMeilleurMixageSon cinema:PrixMeilleurSonFilm)
+
+# Class: cinema:PrixMeilleurMontage (prix du meilleur montage)
+
+AnnotationAssertion(rdfs:label cinema:PrixMeilleurMontage "best editing award"@en)
+AnnotationAssertion(rdfs:label cinema:PrixMeilleurMontage "prix du meilleur montage"@fr)
+SubClassOf(cinema:PrixMeilleurMontage cinema:PrixTechnique)
+
+# Class: cinema:PrixMeilleurPremierFilm (prix du meilleur premier film)
+
+AnnotationAssertion(rdfs:label cinema:PrixMeilleurPremierFilm "best first film award"@en)
+AnnotationAssertion(rdfs:label cinema:PrixMeilleurPremierFilm "prix du meilleur premier film"@fr)
+SubClassOf(cinema:PrixMeilleurPremierFilm cinema:PrixFilm)
+
+# Class: cinema:PrixMeilleurScenario (prix du meilleur scénario)
+
+AnnotationAssertion(rdfs:label cinema:PrixMeilleurScenario "award for best scenario"@en)
+AnnotationAssertion(rdfs:label cinema:PrixMeilleurScenario "prix du meilleur scénario"@fr)
+SubClassOf(cinema:PrixMeilleurScenario cinema:PrixScenario)
+
+# Class: cinema:PrixMeilleurScenarioOriginal (prix du meilleur scénario original)
+
+AnnotationAssertion(rdfs:label cinema:PrixMeilleurScenarioOriginal "award for best original scenario"@en)
+AnnotationAssertion(rdfs:label cinema:PrixMeilleurScenarioOriginal "prix du meilleur scénario original"@fr)
+SubClassOf(cinema:PrixMeilleurScenarioOriginal cinema:PrixScenario)
+
+# Class: cinema:PrixMeilleurScenarioOriginalOuAdaptation (award for best original scenario or adaptation )
+
+AnnotationAssertion(rdfs:label cinema:PrixMeilleurScenarioOriginalOuAdaptation "award for best original scenario or adaptation "@en)
+AnnotationAssertion(rdfs:label cinema:PrixMeilleurScenarioOriginalOuAdaptation "prix du meilleur scénario original ou d'adaptation"@fr)
+SubClassOf(cinema:PrixMeilleurScenarioOriginalOuAdaptation cinema:PrixScenario)
+
+# Class: cinema:PrixMeilleurSon (sound award)
+
+AnnotationAssertion(rdfs:label cinema:PrixMeilleurSon "prix son"@fr)
+AnnotationAssertion(rdfs:label cinema:PrixMeilleurSon "sound award"@en)
+SubClassOf(cinema:PrixMeilleurSon cinema:PrixTechnique)
+
+# Class: cinema:PrixMeilleurSonFilm (best sound award)
+
+AnnotationAssertion(rdfs:label cinema:PrixMeilleurSonFilm "best sound award"@en)
+AnnotationAssertion(rdfs:label cinema:PrixMeilleurSonFilm "prix meilleur son"@fr)
+SubClassOf(cinema:PrixMeilleurSonFilm cinema:PrixMeilleurSon)
+
+# Class: cinema:PrixMeilleureActrice (prix de la meilleure actrice)
+
+AnnotationAssertion(rdfs:label cinema:PrixMeilleureActrice "best actress award"@en)
+AnnotationAssertion(rdfs:label cinema:PrixMeilleureActrice "prix de la meilleure actrice"@fr)
+SubClassOf(cinema:PrixMeilleureActrice cinema:PrixInterpretation)
+
+# Class: cinema:PrixMeilleureActriceSecondRole (prix du meilleur second rôle féminin)
+
+AnnotationAssertion(rdfs:label cinema:PrixMeilleureActriceSecondRole "best second female role award"@en)
+AnnotationAssertion(rdfs:label cinema:PrixMeilleureActriceSecondRole "best supporting actress award"@en)
+AnnotationAssertion(rdfs:label cinema:PrixMeilleureActriceSecondRole "prix du meilleur second rôle féminin"@fr)
+SubClassOf(cinema:PrixMeilleureActriceSecondRole cinema:PrixInterpretation)
+
+# Class: cinema:PrixMeilleureAdaptation (award for best adaptation)
+
+AnnotationAssertion(rdfs:label cinema:PrixMeilleureAdaptation "award for best adaptation"@en)
+AnnotationAssertion(rdfs:label cinema:PrixMeilleureAdaptation "prix de la meilleure adaptation"@fr)
+SubClassOf(cinema:PrixMeilleureAdaptation cinema:PrixScenario)
+
+# Class: cinema:PrixMeilleureAffiche (best poster award)
+
+AnnotationAssertion(rdfs:label cinema:PrixMeilleureAffiche "best poster award"@en)
+AnnotationAssertion(rdfs:label cinema:PrixMeilleureAffiche "prix de la meilleure affiche"@fr)
+SubClassOf(cinema:PrixMeilleureAffiche cinema:PrixTechnique)
+
+# Class: cinema:PrixMeilleureChansonOriginale (prix de la meilleure chanson originale)
+
+AnnotationAssertion(rdfs:label cinema:PrixMeilleureChansonOriginale "best original song award"@en)
+AnnotationAssertion(rdfs:label cinema:PrixMeilleureChansonOriginale "prix de la meilleure chanson originale"@fr)
+SubClassOf(cinema:PrixMeilleureChansonOriginale cinema:PrixMeilleureMusique)
+DisjointClasses(cinema:PrixMeilleureChansonOriginale cinema:PrixMeilleureMusiqueFilm)
+
+# Class: cinema:PrixMeilleureContributionTechnique (prix de la meilleure contribution technique)
+
+AnnotationAssertion(rdfs:label cinema:PrixMeilleureContributionTechnique "best technical contribution award"@en)
+AnnotationAssertion(rdfs:label cinema:PrixMeilleureContributionTechnique "prix de la meilleure contribution technique"@fr)
+SubClassOf(cinema:PrixMeilleureContributionTechnique cinema:PrixTechnique)
+
+# Class: cinema:PrixMeilleureDirectionArtistique (best artistic direction award)
+
+AnnotationAssertion(rdfs:label cinema:PrixMeilleureDirectionArtistique "best artistic direction award"@en)
+AnnotationAssertion(rdfs:label cinema:PrixMeilleureDirectionArtistique "prix de la meilleure direction artistique"@fr)
+SubClassOf(cinema:PrixMeilleureDirectionArtistique cinema:PrixDirection)
+
+# Class: cinema:PrixMeilleureMiseEnScene (prix de la meilleure mise en scène)
+
+AnnotationAssertion(rdfs:label cinema:PrixMeilleureMiseEnScene "best staging award "@en)
+AnnotationAssertion(rdfs:label cinema:PrixMeilleureMiseEnScene "prix de la meilleure mise en scène"@fr)
+SubClassOf(cinema:PrixMeilleureMiseEnScene cinema:PrixDirection)
+
+# Class: cinema:PrixMeilleureMusique (prix musique)
+
+AnnotationAssertion(rdfs:label cinema:PrixMeilleureMusique "best music award"@en)
+AnnotationAssertion(rdfs:label cinema:PrixMeilleureMusique "prix musique"@fr)
+SubClassOf(cinema:PrixMeilleureMusique cinema:PrixTechnique)
+
+# Class: cinema:PrixMeilleureMusiqueFilm (prix de la meilleure musique de film)
+
+AnnotationAssertion(rdfs:label cinema:PrixMeilleureMusiqueFilm "best film song award"@en)
+AnnotationAssertion(rdfs:label cinema:PrixMeilleureMusiqueFilm "prix de la meilleure musique de film"@fr)
+SubClassOf(cinema:PrixMeilleureMusiqueFilm cinema:PrixMeilleureMusique)
+
+# Class: cinema:PrixMeilleurePhotographie (best photography award)
+
+AnnotationAssertion(rdfs:label cinema:PrixMeilleurePhotographie "best photography award"@en)
+AnnotationAssertion(rdfs:label cinema:PrixMeilleurePhotographie "prix de la meilleure photographie"@fr)
+SubClassOf(cinema:PrixMeilleurePhotographie cinema:PrixTechnique)
+
+# Class: cinema:PrixMeilleureProduction (prix de la meilleure production)
+
+AnnotationAssertion(rdfs:label cinema:PrixMeilleureProduction "best production award"@en)
+AnnotationAssertion(rdfs:label cinema:PrixMeilleureProduction "prix de la meilleure production"@fr)
+SubClassOf(cinema:PrixMeilleureProduction cinema:PrixDirection)
+
+# Class: cinema:PrixMeilleureRealisation (best realisation award)
+
+AnnotationAssertion(rdfs:label cinema:PrixMeilleureRealisation "best realisation award"@en)
+AnnotationAssertion(rdfs:label cinema:PrixMeilleureRealisation "prix de la meilleure réalisation"@fr)
+SubClassOf(cinema:PrixMeilleureRealisation cinema:PrixDirection)
+
+# Class: cinema:PrixMeilleursCostumes (prix des meilleurs costumes)
+
+AnnotationAssertion(rdfs:label cinema:PrixMeilleursCostumes "best costume award"@en)
+AnnotationAssertion(rdfs:label cinema:PrixMeilleursCostumes "prix des meilleurs costumes"@fr)
+SubClassOf(cinema:PrixMeilleursCostumes cinema:PrixMeilleursCostumesEtDecors)
+
+# Class: cinema:PrixMeilleursCostumesEtDecors (costume and scenography award)
+
+AnnotationAssertion(rdfs:label cinema:PrixMeilleursCostumesEtDecors "costume and scenography award"@en)
+AnnotationAssertion(rdfs:label cinema:PrixMeilleursCostumesEtDecors "prix costumes et décors"@fr)
+SubClassOf(cinema:PrixMeilleursCostumesEtDecors cinema:PrixTechnique)
+
+# Class: cinema:PrixMeilleursEffetsVisuels (best visual effects award)
+
+AnnotationAssertion(rdfs:label cinema:PrixMeilleursEffetsVisuels "best visual effects award"@en)
+AnnotationAssertion(rdfs:label cinema:PrixMeilleursEffetsVisuels "prix des meilleurs effets visuels"@fr)
+SubClassOf(cinema:PrixMeilleursEffetsVisuels cinema:PrixTechnique)
+
+# Class: cinema:PrixMeriteScientifiqueOuTechnique (scientific or technical merit award)
+
+AnnotationAssertion(rdfs:label cinema:PrixMeriteScientifiqueOuTechnique "prix du mérite scientifique ou technique"@fr)
+AnnotationAssertion(rdfs:label cinema:PrixMeriteScientifiqueOuTechnique "scientific or technical merit award"@en)
+SubClassOf(cinema:PrixMeriteScientifiqueOuTechnique cinema:PrixTechnique)
+
+# Class: cinema:PrixMichelOrnano (Michel Ornano award)
+
+AnnotationAssertion(rdfs:label cinema:PrixMichelOrnano "Michel Ornano"@fr)
+AnnotationAssertion(rdfs:label cinema:PrixMichelOrnano "Michel Ornano award"@en)
+SubClassOf(cinema:PrixMichelOrnano cinema:PrixSpecifiqueFestivalDeDeauville)
+DisjointClasses(cinema:PrixMichelOrnano cinema:PrixRevelationCartier)
+
+# Class: cinema:PrixMiseEnSceneUnCertainRegard (prix de la mise en scène un certain regard)
+
+AnnotationAssertion(rdfs:label cinema:PrixMiseEnSceneUnCertainRegard "prix de la mise en scène un certain regard"@fr)
+SubClassOf(cinema:PrixMiseEnSceneUnCertainRegard cinema:UnCertainRegard)
+
+# Class: cinema:PrixOeuvreCinematographique (cinematographic work award)
+
+AnnotationAssertion(rdfs:comment cinema:PrixOeuvreCinematographique "pourrait être un film")
+AnnotationAssertion(rdfs:label cinema:PrixOeuvreCinematographique "cinematographic work award"@en)
+AnnotationAssertion(rdfs:label cinema:PrixOeuvreCinematographique "prix oeuvre cinématographique"@fr)
+SubClassOf(cinema:PrixOeuvreCinematographique cinema:PrixDecerne)
+
+# Class: cinema:PrixRevelationCartier (Cartier revelation award)
+
+AnnotationAssertion(rdfs:label cinema:PrixRevelationCartier "Cartier revelation award"@en)
+AnnotationAssertion(rdfs:label cinema:PrixRevelationCartier "Révélation Cartier"@fr)
+SubClassOf(cinema:PrixRevelationCartier cinema:PrixSpecifiqueFestivalDeDeauville)
+
+# Class: cinema:PrixScenario (award for scenario)
+
+AnnotationAssertion(rdfs:label cinema:PrixScenario "award for scenario"@en)
+AnnotationAssertion(rdfs:label cinema:PrixScenario "prix pour scénario"@fr)
+SubClassOf(cinema:PrixScenario cinema:PrixDirection)
+
+# Class: cinema:PrixScientifiqueEtIngenierie (scientific and engineering award)
+
+AnnotationAssertion(rdfs:label cinema:PrixScientifiqueEtIngenierie "prix scientifique et ingénierie"@fr)
+AnnotationAssertion(rdfs:label cinema:PrixScientifiqueEtIngenierie "scientific and engineering award"@en)
+SubClassOf(cinema:PrixScientifiqueEtIngenierie cinema:PrixTechnique)
+
+# Class: cinema:PrixSpecialJuryUnCertainRegard (prix spécial du jury un certain regard)
+
+AnnotationAssertion(rdfs:label cinema:PrixSpecialJuryUnCertainRegard "prix spécial du jury un certain regard"@fr)
+SubClassOf(cinema:PrixSpecialJuryUnCertainRegard cinema:UnCertainRegard)
+
+# Class: cinema:PrixSpecifique (specific award)
+
+AnnotationAssertion(rdfs:label cinema:PrixSpecifique "prix spécifique"@fr)
+AnnotationAssertion(rdfs:label cinema:PrixSpecifique "specific award"@en)
+SubClassOf(cinema:PrixSpecifique cinema:PrixOeuvreCinematographique)
+
+# Class: cinema:PrixSpecifiqueCeremonieCesar (Césars ceremony award)
+
+AnnotationAssertion(rdfs:label cinema:PrixSpecifiqueCeremonieCesar "Césars ceremony award"@en)
+AnnotationAssertion(rdfs:label cinema:PrixSpecifiqueCeremonieCesar "prix spécifique à la cérémonie des Césars"@fr)
+SubClassOf(cinema:PrixSpecifiqueCeremonieCesar cinema:PrixSpecifique)
+
+# Class: cinema:PrixSpecifiqueFestivalDeDeauville (prix Specifique au festival de Deauville)
+
+AnnotationAssertion(rdfs:label cinema:PrixSpecifiqueFestivalDeDeauville "Deauville film festival award"@en)
+AnnotationAssertion(rdfs:label cinema:PrixSpecifiqueFestivalDeDeauville "prix Specifique au festival de Deauville"@fr)
+SubClassOf(cinema:PrixSpecifiqueFestivalDeDeauville cinema:PrixSpecifique)
+
+# Class: cinema:PrixSpecifiqueFestivaleDeCannes (Cannes film festival award)
+
+AnnotationAssertion(rdfs:label cinema:PrixSpecifiqueFestivaleDeCannes "Cannes film festival award"@en)
+AnnotationAssertion(rdfs:label cinema:PrixSpecifiqueFestivaleDeCannes "prix spécifique au festival de Cannes"@fr)
+SubClassOf(cinema:PrixSpecifiqueFestivaleDeCannes cinema:PrixSpecifique)
+
+# Class: cinema:PrixTechnique (technical award)
+
+AnnotationAssertion(rdfs:label cinema:PrixTechnique "prix technique"@fr)
+AnnotationAssertion(rdfs:label cinema:PrixTechnique "technical award"@en)
+SubClassOf(cinema:PrixTechnique cinema:PrixArtiste)
+
+# Class: cinema:PrixUnCertainRegard (prix un certain regard)
+
+AnnotationAssertion(rdfs:label cinema:PrixUnCertainRegard "prix un certain regard"@fr)
+SubClassOf(cinema:PrixUnCertainRegard cinema:UnCertainRegard)
+
+# Class: cinema:Regisseur (régisseur)
+
+AnnotationAssertion(rdfs:label cinema:Regisseur "manager"@en)
+AnnotationAssertion(rdfs:label cinema:Regisseur "régisseur"@fr)
+
+# Class: cinema:Role (character)
+
+AnnotationAssertion(rdfs:comment cinema:Role "entité apparaissant dans une oeuvre (une personne fictive ou réelle, un animal, un végétal, le soleil...)")
+AnnotationAssertion(rdfs:label cinema:Role "character"@en)
+AnnotationAssertion(rdfs:label cinema:Role "personnage"@fr)
+AnnotationAssertion(rdfs:label cinema:Role "role"@en)
+AnnotationAssertion(rdfs:label cinema:Role "rôle"@fr)
+
+# Class: cinema:RoleDAnimal (rôle d'animal)
+
+AnnotationAssertion(rdfs:label cinema:RoleDAnimal "animal role"@en)
+AnnotationAssertion(rdfs:label cinema:RoleDAnimal "rôle d'animal"@fr)
+SubClassOf(cinema:RoleDAnimal cinema:Role)
+
+# Class: cinema:RoleDeChien (dog role)
+
+AnnotationAssertion(rdfs:label cinema:RoleDeChien "dog role"@en)
+AnnotationAssertion(rdfs:label cinema:RoleDeChien "rôle de chien"@fr)
+SubClassOf(cinema:RoleDeChien cinema:RoleDAnimal)
+
+# Class: cinema:RoleDeCommissaire (commissioner role)
+
+AnnotationAssertion(rdfs:label cinema:RoleDeCommissaire "commissioner role"@en)
+AnnotationAssertion(rdfs:label cinema:RoleDeCommissaire "rôle de commissaire"@fr)
+SubClassOf(cinema:RoleDeCommissaire cinema:Role)
+
+# Class: cinema:RolePrincipal (premier rôle)
+
+AnnotationAssertion(rdfs:label cinema:RolePrincipal "premier rôle"@fr)
+AnnotationAssertion(rdfs:label cinema:RolePrincipal "rôle principal"@fr)
+AnnotationAssertion(rdfs:label cinema:RolePrincipal "starring role"@en)
+SubClassOf(cinema:RolePrincipal cinema:Role)
+
+# Class: cinema:RoleSecondaire (supporting role)
+
+AnnotationAssertion(rdfs:label cinema:RoleSecondaire "rôle secondaire"@fr)
+AnnotationAssertion(rdfs:label cinema:RoleSecondaire "supporting role"@en)
+SubClassOf(cinema:RoleSecondaire cinema:Role)
+
+# Class: cinema:Sexe (gender)
+
+AnnotationAssertion(rdfs:label cinema:Sexe "gender"@en)
+AnnotationAssertion(rdfs:label cinema:Sexe "sexe"@fr)
+EquivalentClasses(cinema:Sexe ObjectOneOf(cinema:Feminin cinema:Masculin))
+
+# Class: cinema:Technicolor (Technicolor)
+
+AnnotationAssertion(rdfs:label cinema:Technicolor "Technicolor"@fr)
+SubClassOf(cinema:Technicolor cinema:TechniqueDePriseDeVue)
+
+# Class: cinema:Technique (technique)
+
+AnnotationAssertion(rdfs:label cinema:Technique "technique"@fr)
+
+# Class: cinema:TechniqueDAnimation (animation technique)
+
+AnnotationAssertion(rdfs:comment cinema:TechniqueDAnimation "taxonomie ici: http://fr.wikipedia.org/wiki/Animations#Techniques_d.27animation"@fr)
+AnnotationAssertion(rdfs:label cinema:TechniqueDAnimation "animation technique"@en)
+AnnotationAssertion(rdfs:label cinema:TechniqueDAnimation "technique d’animation"@fr)
+SubClassOf(cinema:TechniqueDAnimation cinema:Technique)
+
+# Class: cinema:TechniqueDAnimation2DNumerique (2D digital animation technique)
+
+AnnotationAssertion(rdfs:label cinema:TechniqueDAnimation2DNumerique "2D digital animation technique"@en)
+AnnotationAssertion(rdfs:label cinema:TechniqueDAnimation2DNumerique "technique d'animation en 2D numérique"@fr)
+SubClassOf(cinema:TechniqueDAnimation2DNumerique cinema:TechniqueDImageDeSynthese)
+
+# Class: cinema:TechniqueDAnimation3D (technique d'animation 3D)
+
+AnnotationAssertion(rdfs:label cinema:TechniqueDAnimation3D "3D animation technique"@en)
+AnnotationAssertion(rdfs:label cinema:TechniqueDAnimation3D "technique d'animation 3D"@fr)
+SubClassOf(cinema:TechniqueDAnimation3D cinema:TechniqueDImageDeSynthese)
+
+# Class: cinema:TechniqueDImageDeSynthese (image synthesis technique)
+
+AnnotationAssertion(rdfs:label cinema:TechniqueDImageDeSynthese "image synthesis technique"@en)
+AnnotationAssertion(rdfs:label cinema:TechniqueDImageDeSynthese "technique d'image de synthèse"@fr)
+SubClassOf(cinema:TechniqueDImageDeSynthese cinema:TechniqueDAnimation)
+
+# Class: cinema:TechniqueDePriseDeSon (technique de prise de son)
+
+AnnotationAssertion(rdfs:comment cinema:TechniqueDePriseDeSon "sound recording technique"@en)
+AnnotationAssertion(rdfs:label cinema:TechniqueDePriseDeSon "technique de prise de son"@fr)
+SubClassOf(cinema:TechniqueDePriseDeSon cinema:Technique)
+
+# Class: cinema:TechniqueDePriseDeVue (shooting technique)
+
+AnnotationAssertion(rdfs:label cinema:TechniqueDePriseDeVue "camerawork technique"@en)
+AnnotationAssertion(rdfs:label cinema:TechniqueDePriseDeVue "shooting technique"@en)
+AnnotationAssertion(rdfs:label cinema:TechniqueDePriseDeVue "technique de prise de vue"@fr)
+SubClassOf(cinema:TechniqueDePriseDeVue cinema:Technique)
+
+# Class: cinema:TechniqueDuDessinAnime (cartoon technique
+	
+)
+
+AnnotationAssertion(rdfs:comment cinema:TechniqueDuDessinAnime "dessin animé"@fr)
+AnnotationAssertion(rdfs:comment cinema:TechniqueDuDessinAnime "technique du dessin animé"@fr)
+AnnotationAssertion(rdfs:comment cinema:TechniqueDuDessinAnime "technique d’animation permettant de donner l’illusion du mouvement par des prises de vue successives d’images dessinées"@fr)
+AnnotationAssertion(rdfs:label cinema:TechniqueDuDessinAnime "animated cartoon technique"@en)
+AnnotationAssertion(rdfs:label cinema:TechniqueDuDessinAnime "cartoon technique
+	
+"@en)
+SubClassOf(cinema:TechniqueDuDessinAnime cinema:TechniqueDAnimation)
+
+# Class: cinema:TroisiemePrixCinefondation (third cinéfondation prize)
+
+AnnotationAssertion(rdfs:label cinema:TroisiemePrixCinefondation "third cinéfondation prize"@en)
+AnnotationAssertion(rdfs:label cinema:TroisiemePrixCinefondation "troisième prix Cinéfondation"@fr)
+SubClassOf(cinema:TroisiemePrixCinefondation cinema:Cinefondation)
+
+# Class: cinema:UnCertainRegard (un certain regard)
+
+AnnotationAssertion(rdfs:label cinema:UnCertainRegard "un certain regard"@fr)
+SubClassOf(cinema:UnCertainRegard cinema:PrixSpecifiqueFestivaleDeCannes)
+
+# Class: cinema:Ville (ville)
+
+AnnotationAssertion(rdfs:label cinema:Ville "city"@en)
+AnnotationAssertion(rdfs:label cinema:Ville "ville"@fr)
+SubClassOf(cinema:Ville cinema:LieuAdministratif)
+
+
+############################
+#   Named Individuals
+############################
+
+# Individual: cinema:AbstractionLyrique (cinema:AbstractionLyrique)
+
+ClassAssertion(cinema:CourantCinematographique cinema:AbstractionLyrique)
+ClassAssertion(owl:Thing cinema:AbstractionLyrique)
+
+# Individual: cinema:Action (cinema:Action)
+
+ClassAssertion(cinema:GenreCinematographique cinema:Action)
+ClassAssertion(owl:Thing cinema:Action)
+
+# Individual: cinema:AlleMachtDerSuper8 (cinema:AlleMachtDerSuper8)
+
+ClassAssertion(cinema:CourantCinematographique cinema:AlleMachtDerSuper8)
+ClassAssertion(owl:Thing cinema:AlleMachtDerSuper8)
+
+# Individual: cinema:Amerique (cinema:Amerique)
+
+ClassAssertion(cinema:AireGeographique cinema:Amerique)
+ClassAssertion(owl:Thing cinema:Amerique)
+
+# Individual: cinema:Aventure (cinema:Aventure)
+
+ClassAssertion(cinema:GenreCinematographique cinema:Aventure)
+ClassAssertion(owl:Thing cinema:Aventure)
+
+# Individual: cinema:Battle_of_the_Year (cinema:Battle_of_the_Year)
+
+ClassAssertion(cinema:Film cinema:Battle_of_the_Year)
+ObjectPropertyAssertion(cinema:aPourLieuDeTournage cinema:Battle_of_the_Year cinema:Montpellier)
+ObjectPropertyAssertion(cinema:aPourPaysOrigine cinema:Battle_of_the_Year cinema:Etats-Unis)
+DataPropertyAssertion(cinema:aPourDureeMinutes cinema:Battle_of_the_Year "110"^^xsd:integer)
+
+# Individual: cinema:Belgique (cinema:Belgique)
+
+ClassAssertion(cinema:Pays cinema:Belgique)
+
+# Individual: cinema:Cannes (Cannes)
+
+AnnotationAssertion(rdfs:label cinema:Cannes "Cannes"@fr)
+ClassAssertion(cinema:Ville cinema:Cannes)
+ClassAssertion(owl:Thing cinema:Cannes)
+
+# Individual: cinema:Catastrophe (cinema:Catastrophe)
+
+ClassAssertion(cinema:GenreCinematographique cinema:Catastrophe)
+ClassAssertion(owl:Thing cinema:Catastrophe)
+
+# Individual: cinema:Christmas_in_Paris (cinema:Christmas_in_Paris)
+
+ClassAssertion(cinema:Film cinema:Christmas_in_Paris)
+ObjectPropertyAssertion(cinema:aPourLieuDeTournage cinema:Christmas_in_Paris cinema:Paris)
+ObjectPropertyAssertion(cinema:aPourPaysOrigine cinema:Christmas_in_Paris cinema:Belgique)
+DataPropertyAssertion(cinema:aPourDureeMinutes cinema:Christmas_in_Paris "120"^^xsd:integer)
+
+# Individual: cinema:CinemaDirect (cinema:CinemaDirect)
+
+ClassAssertion(cinema:CourantCinematographique cinema:CinemaDirect)
+ClassAssertion(owl:Thing cinema:CinemaDirect)
+
+# Individual: cinema:CinemaModerne (cinema:CinemaModerne)
+
+ClassAssertion(cinema:CourantCinematographique cinema:CinemaModerne)
+ClassAssertion(owl:Thing cinema:CinemaModerne)
+
+# Individual: cinema:CinemaPur (cinema:CinemaPur)
+
+ClassAssertion(cinema:CourantCinematographique cinema:CinemaPur)
+ClassAssertion(owl:Thing cinema:CinemaPur)
+
+# Individual: cinema:CinemaUnderground (cinema:CinemaUnderground)
+
+ClassAssertion(cinema:CourantCinematographique cinema:CinemaUnderground)
+ClassAssertion(owl:Thing cinema:CinemaUnderground)
+
+# Individual: cinema:ClermontFerrand (Clermont-Ferrand)
+
+AnnotationAssertion(rdfs:label cinema:ClermontFerrand "Clermont-Ferrand"@fr)
+ClassAssertion(cinema:Ville cinema:ClermontFerrand)
+ClassAssertion(owl:Thing cinema:ClermontFerrand)
+
+# Individual: cinema:Comedie (cinema:Comedie)
+
+ClassAssertion(cinema:GenreCinematographique cinema:Comedie)
+ClassAssertion(owl:Thing cinema:Comedie)
+
+# Individual: cinema:ComedieALItalienne (cinema:ComedieALItalienne)
+
+ClassAssertion(cinema:CourantCinematographique cinema:ComedieALItalienne)
+ClassAssertion(owl:Thing cinema:ComedieALItalienne)
+
+# Individual: cinema:Deauville (Deauville)
+
+AnnotationAssertion(rdfs:label cinema:Deauville "Deauville"@fr)
+ClassAssertion(cinema:Ville cinema:Deauville)
+ClassAssertion(owl:Thing cinema:Deauville)
+
+# Individual: cinema:Documentaire (cinema:Documentaire)
+
+ClassAssertion(cinema:GenreCinematographique cinema:Documentaire)
+ClassAssertion(owl:Thing cinema:Documentaire)
+
+# Individual: cinema:Dogme95 (cinema:Dogme95)
+
+ClassAssertion(cinema:CourantCinematographique cinema:Dogme95)
+ClassAssertion(owl:Thing cinema:Dogme95)
+
+# Individual: cinema:Drame (cinema:Drame)
+
+ClassAssertion(cinema:GenreCinematographique cinema:Drame)
+ClassAssertion(owl:Thing cinema:Drame)
+
+# Individual: cinema:EcoleDeBarcelone (cinema:EcoleDeBarcelone)
+
+ClassAssertion(cinema:CourantCinematographique cinema:EcoleDeBarcelone)
+ClassAssertion(owl:Thing cinema:EcoleDeBarcelone)
+
+# Individual: cinema:EcoleDeBerlin (cinema:EcoleDeBerlin)
+
+ClassAssertion(cinema:CourantCinematographique cinema:EcoleDeBerlin)
+ClassAssertion(owl:Thing cinema:EcoleDeBerlin)
+
+# Individual: cinema:Etats-Unis (cinema:Etats-Unis)
+
+ClassAssertion(cinema:Pays cinema:Etats-Unis)
+
+# Individual: cinema:Expressionnisme (cinema:Expressionnisme)
+
+ClassAssertion(cinema:CourantCinematographique cinema:Expressionnisme)
+ClassAssertion(owl:Thing cinema:Expressionnisme)
+
+# Individual: cinema:Fantastique (cinema:Fantastique)
+
+ClassAssertion(cinema:GenreCinematographique cinema:Fantastique)
+ClassAssertion(owl:Thing cinema:Fantastique)
+
+# Individual: cinema:Feminin (Feminin)
+
+AnnotationAssertion(rdfs:label cinema:Feminin "Feminin"@fr)
+ClassAssertion(cinema:Sexe cinema:Feminin)
+ClassAssertion(owl:Thing cinema:Feminin)
+
+# Individual: cinema:FilmNoir (cinema:FilmNoir)
+
+ClassAssertion(cinema:CourantCinematographique cinema:FilmNoir)
+ClassAssertion(owl:Thing cinema:FilmNoir)
+
+# Individual: cinema:France (France)
+
+AnnotationAssertion(rdfs:label cinema:France "France"@fr)
+ClassAssertion(cinema:Pays cinema:France)
+ClassAssertion(owl:Thing cinema:France)
+
+# Individual: cinema:FreeCinema (cinema:FreeCinema)
+
+ClassAssertion(cinema:CourantCinematographique cinema:FreeCinema)
+ClassAssertion(owl:Thing cinema:FreeCinema)
+
+# Individual: cinema:Guerre (cinema:Guerre)
+
+ClassAssertion(cinema:GenreCinematographique cinema:Guerre)
+ClassAssertion(owl:Thing cinema:Guerre)
+
+# Individual: cinema:Horreur (cinema:Horreur)
+
+ClassAssertion(cinema:GenreCinematographique cinema:Horreur)
+ClassAssertion(owl:Thing cinema:Horreur)
+
+# Individual: cinema:Kammerspiel (cinema:Kammerspiel)
+
+ClassAssertion(cinema:CourantCinematographique cinema:Kammerspiel)
+ClassAssertion(owl:Thing cinema:Kammerspiel)
+
+# Individual: cinema:Kino (cinema:Kino)
+
+ClassAssertion(cinema:CourantCinematographique cinema:Kino)
+ClassAssertion(owl:Thing cinema:Kino)
+
+# Individual: cinema:Les_Intouchables (cinema:Les_Intouchables)
+
+ClassAssertion(cinema:Film cinema:Les_Intouchables)
+ObjectPropertyAssertion(cinema:aPourLieuDeTournage cinema:Les_Intouchables cinema:Paris)
+ObjectPropertyAssertion(cinema:aPourPaysOrigine cinema:Les_Intouchables cinema:France)
+DataPropertyAssertion(cinema:aPourDureeMinutes cinema:Les_Intouchables "112"^^xsd:integer)
+
+# Individual: cinema:Masculin (Masculin)
+
+AnnotationAssertion(rdfs:label cinema:Masculin "Masculin"@fr)
+ClassAssertion(cinema:Sexe cinema:Masculin)
+ClassAssertion(owl:Thing cinema:Masculin)
+
+# Individual: cinema:Montpellier (cinema:Montpellier)
+
+ClassAssertion(cinema:Ville cinema:Montpellier)
+
+# Individual: cinema:Mumblecore (cinema:Mumblecore)
+
+ClassAssertion(cinema:CourantCinematographique cinema:Mumblecore)
+ClassAssertion(owl:Thing cinema:Mumblecore)
+
+# Individual: cinema:Neorealisme (cinema:Neorealisme)
+
+ClassAssertion(cinema:CourantCinematographique cinema:Neorealisme)
+ClassAssertion(owl:Thing cinema:Neorealisme)
+
+# Individual: cinema:NewFrenchExtremism (cinema:NewFrenchExtremism)
+
+ClassAssertion(cinema:CourantCinematographique cinema:NewFrenchExtremism)
+ClassAssertion(owl:Thing cinema:NewFrenchExtremism)
+
+# Individual: cinema:NonNarration (cinema:NonNarration)
+
+ClassAssertion(cinema:CourantCinematographique cinema:NonNarration)
+ClassAssertion(owl:Thing cinema:NonNarration)
+
+# Individual: cinema:NouveauCinemaAllemand (cinema:NouveauCinemaAllemand)
+
+ClassAssertion(cinema:CourantCinematographique cinema:NouveauCinemaAllemand)
+ClassAssertion(owl:Thing cinema:NouveauCinemaAllemand)
+
+# Individual: cinema:NouvelHollywood (cinema:NouvelHollywood)
+
+ClassAssertion(cinema:CourantCinematographique cinema:NouvelHollywood)
+ClassAssertion(owl:Thing cinema:NouvelHollywood)
+
+# Individual: cinema:NouvelleVague (cinema:NouvelleVague)
+
+ClassAssertion(cinema:CourantCinematographique cinema:NouvelleVague)
+ClassAssertion(owl:Thing cinema:NouvelleVague)
+
+# Individual: cinema:Oucipo (cinema:Oucipo)
+
+ClassAssertion(cinema:CourantCinematographique cinema:Oucipo)
+ClassAssertion(owl:Thing cinema:Oucipo)
+
+# Individual: cinema:Paris (cinema:Paris)
+
+ClassAssertion(cinema:Ville cinema:Paris)
+
+# Individual: cinema:PremiereAvantGarde (cinema:PremiereAvantGarde)
+
+ClassAssertion(cinema:CourantCinematographique cinema:PremiereAvantGarde)
+ClassAssertion(owl:Thing cinema:PremiereAvantGarde)
+
+# Individual: cinema:RealismePoetique (cinema:RealismePoetique)
+
+ClassAssertion(cinema:CourantCinematographique cinema:RealismePoetique)
+ClassAssertion(owl:Thing cinema:RealismePoetique)
+
+# Individual: cinema:RenouveauDuCinemaQuebecois (cinema:RenouveauDuCinemaQuebecois)
+
+ClassAssertion(cinema:CourantCinematographique cinema:RenouveauDuCinemaQuebecois)
+ClassAssertion(owl:Thing cinema:RenouveauDuCinemaQuebecois)
+
+# Individual: cinema:Romance (cinema:Romance)
+
+ClassAssertion(cinema:GenreCinematographique cinema:Romance)
+ClassAssertion(owl:Thing cinema:Romance)
+
+# Individual: cinema:RésistanceDesCorps (cinema:RésistanceDesCorps)
+
+ClassAssertion(cinema:CourantCinematographique cinema:RésistanceDesCorps)
+ClassAssertion(owl:Thing cinema:RésistanceDesCorps)
+
+# Individual: cinema:ScienceFiction (cinema:ScienceFiction)
+
+ClassAssertion(cinema:GenreCinematographique cinema:ScienceFiction)
+ClassAssertion(owl:Thing cinema:ScienceFiction)
+
+# Individual: cinema:TelephoneBlanc (cinema:TelephoneBlanc)
+
+ClassAssertion(cinema:CourantCinematographique cinema:TelephoneBlanc)
+ClassAssertion(owl:Thing cinema:TelephoneBlanc)
+
+# Individual: cinema:The_Da_Vinci_Code (cinema:The_Da_Vinci_Code)
+
+ClassAssertion(cinema:Film cinema:The_Da_Vinci_Code)
+ObjectPropertyAssertion(cinema:aPourLieuDeTournage cinema:The_Da_Vinci_Code cinema:Paris)
+ObjectPropertyAssertion(cinema:aPourPaysOrigine cinema:The_Da_Vinci_Code cinema:Etats-Unis)
+DataPropertyAssertion(cinema:aPourDureeMinutes cinema:The_Da_Vinci_Code "149"^^xsd:integer)
+
+# Individual: cinema:Western (cinema:Western)
+
+ClassAssertion(cinema:GenreCinematographique cinema:Western)
+ClassAssertion(owl:Thing cinema:Western)
+
+# Individual: <http://www.irit.fr/recherches/MELODI/ontologies/FilmographieV1.owl#8th_Wonderland> (<http://www.irit.fr/recherches/MELODI/ontologies/FilmographieV1.owl#8th_Wonderland>)
+
+ClassAssertion(cinema:Film <http://www.irit.fr/recherches/MELODI/ontologies/FilmographieV1.owl#8th_Wonderland>)
+ObjectPropertyAssertion(cinema:aPourLieuDeTournage <http://www.irit.fr/recherches/MELODI/ontologies/FilmographieV1.owl#8th_Wonderland> cinema:Montpellier)
+ObjectPropertyAssertion(cinema:aPourLieuDeTournage <http://www.irit.fr/recherches/MELODI/ontologies/FilmographieV1.owl#8th_Wonderland> cinema:Paris)
+ObjectPropertyAssertion(cinema:aPourPaysOrigine <http://www.irit.fr/recherches/MELODI/ontologies/FilmographieV1.owl#8th_Wonderland> cinema:France)
+DataPropertyAssertion(cinema:aPourDureeMinutes <http://www.irit.fr/recherches/MELODI/ontologies/FilmographieV1.owl#8th_Wonderland> "105"^^xsd:integer)
+
+
+DisjointClasses(cinema:CameraOr cinema:Cinefondation cinema:UnCertainRegard)
+DisjointClasses(cinema:DeuxiemePrixCinefondation cinema:PremierPrixCinefondation cinema:TroisiemePrixCinefondation)
+DisjointClasses(cinema:FestivalDeCannes cinema:FestivalDeClermontFerrand cinema:FestivalDeDeauville cinema:FestivalDuReel)
+DisjointClasses(cinema:GrandPrix cinema:PrixCritiqueInternationale cinema:PrixFilmdAnimation cinema:PrixHonneur cinema:PrixJury cinema:PrixMeilleurFilm cinema:PrixMeilleurPremierFilm)
+DisjointClasses(cinema:PrixDirection cinema:PrixInterpretation cinema:PrixTechnique)
+DisjointClasses(cinema:PrixMeilleurActeur cinema:PrixMeilleurActeurSecondRole cinema:PrixMeilleurEspoirFeminin cinema:PrixMeilleurEspoirMasculin cinema:PrixMeilleureActrice cinema:PrixMeilleureActriceSecondRole)
+DisjointClasses(cinema:PrixMeilleurDecor cinema:PrixMeilleurMaquillage cinema:PrixMeilleursCostumes)
+DisjointClasses(cinema:PrixMeilleurMontage cinema:PrixMeilleurSon cinema:PrixMeilleureAffiche cinema:PrixMeilleureContributionTechnique cinema:PrixMeilleureMusique cinema:PrixMeilleurePhotographie cinema:PrixMeilleursCostumesEtDecors cinema:PrixMeilleursEffetsVisuels cinema:PrixMeriteScientifiqueOuTechnique cinema:PrixScientifiqueEtIngenierie)
+DisjointClasses(cinema:PrixMeilleurScenario cinema:PrixMeilleurScenarioOriginal cinema:PrixMeilleurScenarioOriginalOuAdaptation cinema:PrixMeilleureAdaptation)
+DisjointClasses(cinema:PrixMeilleureDirectionArtistique cinema:PrixMeilleureMiseEnScene cinema:PrixMeilleureProduction cinema:PrixMeilleureRealisation cinema:PrixScenario)
+DisjointClasses(cinema:PrixMiseEnSceneUnCertainRegard cinema:PrixSpecialJuryUnCertainRegard cinema:PrixUnCertainRegard)
+DisjointClasses(cinema:PrixSpecifiqueCeremonieCesar cinema:PrixSpecifiqueFestivalDeDeauville cinema:PrixSpecifiqueFestivaleDeCannes)
+DifferentIndividuals(cinema:Feminin cinema:Masculin)
+SubObjectPropertyOf(ObjectPropertyChain(cinema:PersonneAPourRecompense cinema:estDecernePar) cinema:estRecompenseA)
+SubObjectPropertyOf(ObjectPropertyChain(cinema:PersonneAPourRecompense cinema:recompenseFilm) cinema:estRecompensePour)
+SubObjectPropertyOf(ObjectPropertyChain(cinema:aPourLieuDeTournage cinema:estSitueDans) cinema:aPourLieuDeTournage)
+SubObjectPropertyOf(ObjectPropertyChain(cinema:aPourLieuMort cinema:estSitueDans) cinema:aPourLieuMort)
+SubObjectPropertyOf(ObjectPropertyChain(cinema:aPourLieuNaissance cinema:estSitueDans) cinema:aPourLieuNaissance)
+SubObjectPropertyOf(ObjectPropertyChain(cinema:aPourOrigineGeographique cinema:estSitueDans) cinema:aPourOrigineGeographique)
+SubObjectPropertyOf(ObjectPropertyChain(cinema:concourtPourPrix cinema:estDecernePar) cinema:concourtPourCompetition)
+SubObjectPropertyOf(ObjectPropertyChain(cinema:estActeurDans cinema:aPourActeur) cinema:aJoueAvec)
+SubObjectPropertyOf(ObjectPropertyChain(cinema:estCascadeurPourRole cinema:apparaitDans) cinema:estCascadeurDansFilm)
+SubObjectPropertyOf(ObjectPropertyChain(cinema:estLaDoublureDeRole cinema:apparaitDans) cinema:estDoublureDansFilm)
+SubObjectPropertyOf(ObjectPropertyChain(cinema:estLeDoubleurDeRole cinema:estIncarnePar) cinema:estLeDoubleurDeActeur)
+SubObjectPropertyOf(ObjectPropertyChain(cinema:incarne cinema:apparaitDans) cinema:estActeurDans)
+SubObjectPropertyOf(ObjectPropertyChain(cinema:incarne cinema:roleDoublePar) cinema:acteurDoublePar)
+SubObjectPropertyOf(ObjectPropertyChain(cinema:seDerouleDans cinema:estSitueDans) cinema:seDerouleDans)
+)
