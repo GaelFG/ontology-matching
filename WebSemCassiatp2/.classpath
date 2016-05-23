@@ -5,5 +5,6 @@
 	<classpathentry kind="lib" path="lib/align.jar"/>
 	<classpathentry kind="lib" path="lib/ontowrap.jar"/>
 	<classpathentry kind="lib" path="lib/procalign.jar"/>
+	<classpathentry kind="lib" path="lib/log4j-over-slf4j.jar"/>
 	<classpathentry kind="output" path="bin"/>
 </classpath>
