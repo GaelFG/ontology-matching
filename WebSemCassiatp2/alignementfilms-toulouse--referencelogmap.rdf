@@ -1,0 +1,103 @@
+<?xml version="1.0" encoding="utf-8"?>
+<rdf:RDF xmlns="http://knowledgeweb.semanticweb.org/heterogeneity/alignment"
+	xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+	xmlns:xsd="http://www.w3.org/2001/XMLSchema#">
+
+<Alignment>
+<xml>yes</xml>
+<level>0</level>
+<type>??</type>
+<onto1>http://www.irit.fr/recherches/MELODI/ontologies/FilmographieV1.owl</onto1>
+<onto2>http://www.irit.fr/recherches/MELODI/ontologies/FilmographieV1.owl</onto2>
+<uri1>http://www.irit.fr/recherches/MELODI/ontologies/FilmographieV1.owl</uri1>
+<uri2>http://www.irit.fr/recherches/MELODI/ontologies/FilmographieV1.owl</uri2>
+<map>
+	<Cell>
+		<entity1 rdf:resource="http://www.irit.fr/recherches/MELODI/ontologies/FilmographieV1.owl#Pays"/>
+		<entity2 rdf:resource="http://www.semanticweb.org/cassia/ontologies/2016/FilmsToulouse#Pays"/>
+		<measure rdf:datatype="xsd:float">0.9</measure>
+		<relation>=</relation>
+	</Cell>
+</map>
+<map>
+	<Cell>
+		<entity1 rdf:resource="http://www.irit.fr/recherches/MELODI/ontologies/FilmographieV1.owl#LongMetrage"/>
+		<entity2 rdf:resource="http://www.semanticweb.org/cassia/ontologies/2016/FilmsToulouse#FilmLong"/>
+		<measure rdf:datatype="xsd:float">0.9</measure>
+		<relation>=</relation>
+	</Cell>
+</map>
+<map>
+	<Cell>
+		<entity1 rdf:resource="http://www.irit.fr/recherches/MELODI/ontologies/FilmographieV1.owl#Film"/>
+		<entity2 rdf:resource="http://www.semanticweb.org/cassia/ontologies/2016/FilmsToulouse#Film"/>
+		<measure rdf:datatype="xsd:float">1.02</measure>
+		<relation>=</relation>
+	</Cell>
+</map>
+<map>
+	<Cell>
+		<entity1 rdf:resource="http://www.irit.fr/recherches/MELODI/ontologies/FilmographieV1.owl#Artiste"/>
+		<entity2 rdf:resource="http://www.semanticweb.org/cassia/ontologies/2016/FilmsToulouse#Artiste"/>
+		<measure rdf:datatype="xsd:float">0.5</measure>
+		<relation>=</relation>
+	</Cell>
+</map>
+<map>
+	<Cell>
+		<entity1 rdf:resource="http://www.irit.fr/recherches/MELODI/ontologies/FilmographieV1.owl#CourtMetrage"/>
+		<entity2 rdf:resource="http://www.semanticweb.org/cassia/ontologies/2016/FilmsToulouse#FilmCourt"/>
+		<measure rdf:datatype="xsd:float">1.0</measure>
+		<relation>=</relation>
+	</Cell>
+</map>
+<map>
+	<Cell>
+		<entity1 rdf:resource="http://www.irit.fr/recherches/MELODI/ontologies/FilmographieV1.owl#FilmEtranger"/>
+		<entity2 rdf:resource="http://www.semanticweb.org/cassia/ontologies/2016/FilmsToulouse#FilmEtranger"/>
+		<measure rdf:datatype="xsd:float">1.0</measure>
+		<relation>=</relation>
+	</Cell>
+</map>
+<map>
+	<Cell>
+		<entity1 rdf:resource="http://www.irit.fr/recherches/MELODI/ontologies/FilmographieV1.owl#Ville"/>
+		<entity2 rdf:resource="http://www.semanticweb.org/cassia/ontologies/2016/FilmsToulouse#Ville"/>
+		<measure rdf:datatype="xsd:float">0.9</measure>
+		<relation>=</relation>
+	</Cell>
+</map>
+<map>
+	<Cell>
+		<entity1 rdf:resource="http://www.irit.fr/recherches/MELODI/ontologies/FilmographieV1.owl#aRealise"/>
+		<entity2 rdf:resource="http://www.semanticweb.org/cassia/ontologies/2016/FilmsToulouse#realise"/>
+		<measure rdf:datatype="xsd:float">0.93</measure>
+		<relation>=</relation>
+	</Cell>
+</map>
+<map>
+	<Cell>
+		<entity1 rdf:resource="http://www.w3.org/2002/07/owl#topObjectProperty"/>
+		<entity2 rdf:resource="http://www.w3.org/2002/07/owl#topObjectProperty"/>
+		<measure rdf:datatype="xsd:float">1.0</measure>
+		<relation>=</relation>
+	</Cell>
+</map>
+<map>
+	<Cell>
+		<entity1 rdf:resource="http://www.irit.fr/recherches/MELODI/ontologies/FilmographieV1.owl#aPourActeur"/>
+		<entity2 rdf:resource="http://www.semanticweb.org/cassia/ontologies/2016/FilmsToulouse#aPourActeur"/>
+		<measure rdf:datatype="xsd:float">1.0</measure>
+		<relation>=</relation>
+	</Cell>
+</map>
+<map>
+	<Cell>
+		<entity1 rdf:resource="http://www.irit.fr/recherches/MELODI/ontologies/FilmographieV1.owl#France"/>
+		<entity2 rdf:resource="http://www.semanticweb.org/cassia/ontologies/2016/FilmsToulouse#France"/>
+		<measure rdf:datatype="xsd:float">1.0</measure>
+		<relation>=</relation>
+	</Cell>
+</map>
+</Alignment>
+</rdf:RDF>
