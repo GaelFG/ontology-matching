@@ -13,7 +13,6 @@ import org.semanticweb.owl.align.AlignmentException;
 import org.semanticweb.owl.align.AlignmentProcess;
 import org.semanticweb.owl.align.AlignmentVisitor;
 
-import fr.inrialpes.exmo.align.impl.method.ClassStructAlignment;
 import fr.inrialpes.exmo.align.impl.method.EditDistNameAlignment;
 import fr.inrialpes.exmo.align.impl.renderer.RDFRendererVisitor;
 
@@ -51,7 +50,12 @@ public class TPDeuxPartieUne {
 		//choisissez l'un des matcheurs implementé par l'API d'Alignement et que vous avez 
 		 //testé lors du premier TP ; 
 		//TODO penser a preciser recherhe de la methode d'alignement apes plusieur essais blabla
-		alignement = genererAlignement(ontologieA, ontologieB, new EditDistNameAlignment());
+		AlignmentProcess alignementProcess = new EditDistNameAlignment();
+		alignementProcess.cut(0.8);//TODO apparament ne fait rien en fait
+		alignement = genererAlignement(ontologieA, ontologieB, alignementProcess);
+		//Ce generateur genere beacoup trops de faux positifs, on demande une précision minimum empirique.
+		alignement.cut(0.8);
+		System.out.println(alignement.nbCells());
 		render(alignement, "./alignement"+prefixNomFichier+"-de-base.rdf");
 		
 		// 2. développez le matcheur basé sur la comparaison de labels indiqué ci-dessous ;
