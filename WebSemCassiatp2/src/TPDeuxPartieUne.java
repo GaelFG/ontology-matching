@@ -12,9 +12,11 @@ import org.semanticweb.owl.align.Alignment;
 import org.semanticweb.owl.align.AlignmentException;
 import org.semanticweb.owl.align.AlignmentProcess;
 import org.semanticweb.owl.align.AlignmentVisitor;
+import org.semanticweb.owlapi.model.OWLOntologyCreationException;
 
 import fr.inrialpes.exmo.align.impl.method.EditDistNameAlignment;
 import fr.inrialpes.exmo.align.impl.renderer.RDFRendererVisitor;
+import fr.inrialpes.exmo.ontowrap.OntowrapException;
 
 public class TPDeuxPartieUne {
 
@@ -44,27 +46,26 @@ public class TPDeuxPartieUne {
 	}
 	
 	// On genere un alignement et on en check la qualité selon trois methides differentes
-	public void traiterUnePaireDOntologies(URI ontologieA, URI ontologieB, String prefixNomFichier) throws FileNotFoundException, UnsupportedEncodingException, AlignmentException{
+	public void traiterUnePaireDOntologies(URI ontologieA, URI ontologieB, String prefixNomFichier) throws FileNotFoundException, UnsupportedEncodingException, AlignmentException, OWLOntologyCreationException, OntowrapException{
 		Alignment alignement;
 		//choisissez l'un des matcheurs implementé par l'API d'Alignement et que vous avez 
 		 //testé lors du premier TP ; 
 		//TODO penser a preciser recherhe de la methode d'alignement apes plusieur essais blabla
 		AlignmentProcess alignementProcess = new EditDistNameAlignment();
-		alignementProcess.cut(0.8);//TODO apparament ne fait rien en fait
+		//alignementProcess.cut(0.8);//TODO apparament ne fait rien en fait
 		alignement = genererAlignement(ontologieA, ontologieB, alignementProcess);
-		//Ce generateur genere beacoup trops de faux positifs, on demande une précision minimum empirique.
+		//Ce generateur genere beaucoup trop de faux positifs, on demande une précision minimum empirique.
 		alignement.cut(0.8);
-		System.out.println(alignement.nbCells());
+		System.out.println("Alignement 1 : " + alignement.nbCells());
 		render(alignement, "./alignement"+prefixNomFichier+"-de-base.rdf");
 		
 		// 2. développez le matcheur basé sur la comparaison de labels indiqué ci-dessous ;
-		//TODO alignement = genererAlignement(ontologieA, ontologieB, MONALIGNEURMAGUEULE);
-		render(alignement, "./alignement"+prefixNomFichier+"-comparaison-label.rdf");
-		
-		 //3. utilisez le matcheur LogMap, disponible
-		 //sur http://www.cs.ox.ac.uk/isg/projects/LogMap/.
-		//TODO alignement = genererAlignement(ontologieA, ontologieB, MONALIGNEURMAGUEULE);
-		render(alignement, "./alignement"+prefixNomFichier+"-logmap.rdf");
+		MatcheurLabels matcheurLabelProcess= new MatcheurLabels();
+		matcheurLabelProcess.init (ontologieA, ontologieB); 
+		matcheurLabelProcess.align(null, new Properties());
+		matcheurLabelProcess.cut(0.8);
+		System.out.println("Alignement 2 : " + matcheurLabelProcess.nbCells());
+		render(matcheurLabelProcess, "./alignement"+prefixNomFichier+"-comparaison-label.rdf");
 		
 	}
 	
@@ -78,7 +79,6 @@ public class TPDeuxPartieUne {
 	 * @throws Exception
 	 */
 	public static Alignment genererAlignement(URI onto1, URI onto2, AlignmentProcess process) throws AlignmentException {
-
 		process.init (onto1, onto2); 
 		process.align(null, new Properties());
 		return process;
