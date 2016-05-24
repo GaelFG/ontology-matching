@@ -64,7 +64,6 @@ public class TPDeuxPartieUne {
 		MatcheurLabels matcheurLabelProcess= new MatcheurLabels();
 		matcheurLabelProcess.init (ontologieA, ontologieB); 
 		matcheurLabelProcess.align(null, new Properties());
-		matcheurLabelProcess.cut(0.8);
 		System.out.println("Alignement 2 : " + matcheurLabelProcess.nbCells());
 		render(matcheurLabelProcess, "./alignement"+prefixNomFichier+"-comparaison-label.rdf");
 		
