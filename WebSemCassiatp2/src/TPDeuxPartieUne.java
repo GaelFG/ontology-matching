@@ -35,7 +35,7 @@ public class TPDeuxPartieUne {
 	public void questionUneGenerationDAlignements() throws Exception {
 		URI UriFilmsToulouseOntologie = new URI("http://www.irit.fr/~Cassia.Trojahn/insa/FilmsToulouse.owl");
 		//URI UriNotreOntologie = new URI("http://mappings.dbpedia.org/server/ontology/dbpedia.owl");
-		URI UriNotreOntologie = new URI("file:///C:/Users/gwend/git/tpcassia/WebSemCassiatp2/maFilmographie.owl");//TODO METTRE VRAIE URL
+		URI UriNotreOntologie = new URI("file:///C:/Users/yanni_000/git/ontology-matching/WebSemCassiatp2/maFilmographie.owl");//TODO METTRE VRAIE URL
 		URI UriDBPediaOntologie = new URI("http://mappings.dbpedia.org/server/ontology/dbpedia.owl");
 		
 		// paire d'ontologie (votre ontologie et FilmsToulouse)
