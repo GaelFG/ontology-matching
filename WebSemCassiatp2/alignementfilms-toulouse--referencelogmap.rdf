@@ -31,7 +31,7 @@
 	<Cell>
 		<entity1 rdf:resource="http://www.irit.fr/recherches/MELODI/ontologies/FilmographieV1.owl#Film"/>
 		<entity2 rdf:resource="http://www.semanticweb.org/cassia/ontologies/2016/FilmsToulouse#Film"/>
-		<measure rdf:datatype="xsd:float">1.02</measure>
+		<measure rdf:datatype="xsd:float">1.0</measure>
 		<relation>=</relation>
 	</Cell>
 </map>
