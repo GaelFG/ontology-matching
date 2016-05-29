@@ -55,11 +55,9 @@ public class TPDeuxPartieUne {
 	// On genere un alignement et on en check la qualité selon trois methides differentes
 	public void traiterUnePaireDOntologies(URI ontologieA, URI ontologieB, String prefixNomFichier, URI uriAlignementReference) throws FileNotFoundException, UnsupportedEncodingException, AlignmentException, OWLOntologyCreationException, OntowrapException, URISyntaxException{
 		Alignment alignement;
-		//choisissez l'un des matcheurs implementé par l'API d'Alignement et que vous avez 
-		 //testé lors du premier TP ; 
-		//TODO penser a preciser recherhe de la methode d'alignement apes plusieur essais blabla
+		// choisissez l'un des matcheurs implementé par l'API d'Alignement et que vous avez 
+		// testé lors du premier TP ; 
 		AlignmentProcess alignementProcess = new EditDistNameAlignment();
-		//alignementProcess.cut(0.8);//TODO apparament ne fait rien en fait
 		alignement = genererAlignement(ontologieA, ontologieB, alignementProcess);
 		//Ce generateur genere beaucoup trop de faux positifs, on demande une précision minimum empirique.
 		alignement.cut(0.8);
@@ -73,7 +71,7 @@ public class TPDeuxPartieUne {
 		matcheurLabelProcess.init (ontologieA, ontologieB); 
 		matcheurLabelProcess.align(null, new Properties());
 		System.out.println("Alignement 2 (parseur manuel): " + matcheurLabelProcess.nbCells());
-		evaluate(alignement, uriAlignementReference);
+		evaluate(matcheurLabelProcess, uriAlignementReference);
 		render(matcheurLabelProcess, "./alignement"+prefixNomFichier+"-comparaison-label.rdf");
 		
 		
